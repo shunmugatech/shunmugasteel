@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <script>
+            function toggleMenuItems() {
+                const produtMenu = document.getElementById('product-menu');
+                if (produtMenu.className.includes("hide")) {
+                    produtMenu.className = "product-menu";
+                    document.getElementById('caret-down').className = 'caret-down'
+                } else {
+                    produtMenu.className = "product-menu hide";
+                    document.getElementById('caret-down').className = 'hide'
+                }
+            }
+
+            function changeURL(url) {
+                window.location.href = `${url}`
+            }
+
+            window.addEventListener('click', function (e) {
+
+            });
+        </script>
+        <nav>
+            <div class="header-company-name">
+                <a href="/">
+                    <img src="../images/shunmuga-logo.png" alt="vel-logo" />
+                </a>
+                <div>
+                    <h1>Shunmuga</h1>
+                    <h3>Steel Traders</h3>
+                </div>
+            </div>
+            <ul class="menu-items">
+                <li class="menu-items-list">
+                    <a href="/" class="href">Home</a>
+                </li>
+                <li class="menu-items-list">
+                    <a href="/about.html" class="href">About us</a>
+                </li>
+                <li class="menu-items-list product-item">
+                    <a onClick="toggleMenuItems()">Product
+                        <span id="caret-down" class="caret-down hide"></span>
+                    </a>
+                    <div id="product-menu" class="product-menu hide">
+                        <div class="product-image-container" onclick="changeURL('../products/gp-coil-sheet.html')">
+                            <a href="">GP coil sheet</a>
+                            <img src="../images/gpsheetcoil.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('../products/color-coil-sheet.html')">
+                            <a href="">Color coil sheet</a>
+                            <img src="../images/coloursheet.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('../products/gp-sheet.html')">
+                            <a href="">Galvalume sheet</a>
+                            <img src="../images/galvanized.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container"
+                            onclick="changeURL('../products/pre-painted-galvalume.html')">
+                            <a href="">Pre painted Galvalume sheet</a>
+                            <img src="../images/jswsheet.jpg" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-items-list">
+                    <a href="#contact-section" class="href">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="floating-icon">
+            <a href="https://wa.me/+917200240007/" target="_blank"><img src="../images/whatsapp.gif" width="55px" /></a>
+        </div>
+    </header>
+    <main>
+        <div class="product-page">
+            <div class="product-image-banner">
+                <img src="../images/gp-coil-banner.jpg" alt="">
+                <h1>GP COIL & SHEETS SUPPLIERS</h1>
+            </div>
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="../images/gpsheetcoil.jpg" alt="">
+                </div>
+                <div class="product-description">
+                    <h3>GP Coil and Sheet Manufacturers in Chennai</h3>
+                    <br>
+                    <p>
+                        Welcome to our website, where we offer a range of high-quality GP coil sheet products for sale.
+                        Our
+                        GP coil sheets are made from the finest quality steel and are coated with a layer of zinc to
+                        provide
+                        exceptional resistance against corrosion and rust.
+                    </p>
+                    <p>
+                        Our GP coil sheet products come in various sizes and thicknesses to cater to a diverse range of
+                        needs and requirements. We offer competitive pricing and ensure that our customers receive only
+                        the
+                        best quality products.
+                    </p>
+                    <br>
+                    <p>
+                        Our website is designed to provide you with an easy and hassle-free shopping experience. You can
+                        browse through our products, select the ones you need, and place your order with just a few
+                        clicks.
+                        We also offer fast and reliable shipping to ensure that your products reach you as quickly as
+                        possible.
+                    </p>
+                    <br>
+                    <p>
+                        Our team of experts is always available to answer any questions you may have and provide
+                        guidance on
+                        which GP coil sheet products are best suited to your needs. With our commitment to quality and
+                        customer satisfaction, you can rest assured that you are making the right choice by choosing us
+                        for
+                        your GP coil sheet needs.
+                    </p>
+                    <p>
+                        Thank you for visiting our website, and we look forward to serving you soon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

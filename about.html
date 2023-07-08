@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+  <script>
+    function openAboutTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName('tabcontent')
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none'
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName('tablinks')
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' active', '')
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = 'block'
+      evt.currentTarget.className += ' active'
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <script>
+      function toggleMenuItems() {
+        const produtMenu = document.getElementById("product-menu");
+        if (produtMenu.className.includes("hide")) {
+          produtMenu.className = "product-menu";
+          document.getElementById("caret-down").className = "caret-down";
+        } else {
+          produtMenu.className = "product-menu hide";
+          document.getElementById("caret-down").className = "hide";
+        }
+      }
+
+      function changeURL(url) {
+        window.location.href = `${url}`;
+      }
+
+      window.addEventListener("click", function (e) { });
+    </script>
+    <div class="header-contact">
+      <div class="header-contact-text">
+        <img src="./images/location.png" alt="" />
+        <span>Office Location</span>
+      </div>
+      <div class="header-contact-text">
+        <img src="./images/receiver.png" alt="" />
+        <span>Phone number</span>
+      </div>
+      <div class="header-contact-text">
+        <img src="./images/receiver.png" alt="" />
+        <span>Tel number</span>
+      </div>
+      <div class="header-contact-text">
+        <img src="./images/email.png" alt="" />
+        <span>Email</span>
+      </div>
+    </div>
+    <nav>
+      <div class="header-company-name">
+        <a href="/">
+          <img src="./images/logo.png" alt="vel-logo" />
+        </a>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-items-list">
+          <a href="/" class="href">Home</a>
+        </li>
+        <li class="menu-items-list">
+          <a href="/about.html" class="href">About us</a>
+        </li>
+        <li class="menu-items-list product-item">
+          <a onClick="toggleMenuItems()">Product
+            <span id="caret-down" class="caret-down hide"></span>
+          </a>
+          <div id="product-menu" class="product-menu hide">
+            <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+              <a href="">Cold Rolled Steel</a>
+              <img src="./images/cold-rolled-steel.jpg" alt="" />
+            </div>
+            <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+              <a href="">Galvanized Steel</a>
+              <img src="./images/gpsheetcoil.jpg" alt="" />
+            </div>
+            <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+              <a href="">Color coat Steel</a>
+              <img src="./images/coloursheet.png" alt="" />
+            </div>
+            <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+              <a href="">Roofing accessories</a>
+              <img src="./images/roofing-accessories.png" alt="" />
+            </div>
+            <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+              <a href="">Decking Sheets</a>
+              <img src="./images/decking-sheets.jpeg" alt="" />
+            </div>
+            <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+              <a href="">GC Sheets</a>
+              <img src="./images/gc-sheet.jpg" alt="" />
+            </div>
+          </div>
+        </li>
+        <li class="menu-items-list">
+          <a href="#contact-section" class="href">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="floating-icon">
+      <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
+    </div>
+  </header>
+  <main>
+    <section class="about-section">
+      <img class="about-us-img" src="./images/about-us.png" alt="about us" />
+
+      <div class="about-tab-container">
+        <div class="about-tab">
+          <button class="tablinks active" onclick="openAboutTab(event, 'aboutTab1')">
+            Who We are
+          </button>
+          <button class="tablinks" onclick="openAboutTab(event, 'aboutTab2')">
+            Compay Profile
+          </button>
+          <button class="tablinks" onclick="openAboutTab(event, 'aboutTab3')">
+            Board of Directors
+          </button>
+          <button class="tablinks" onclick="openAboutTab(event, 'aboutTab4')">
+            Core Value
+          </button>
+        </div>
+
+        <div id="aboutTab1" class="tabcontent">
+          <div class="tab-content-1">
+            <h2>Who We are</h2>
+            <div class="sub-text">
+              <p>
+                Steel…. a word often used as a synonym to strength. At Shunmuga
+                Steel Traders we have acquired this all important strength, in our
+                values, depth of knowledge, and dedication of a team with nerves of
+                steel. This indeed is the strength on which SST thrives. All this to
+                deliver excellence in our Galvanized Steel products that exactly is
+                what makes us a best trading company. AT SST, we strive for trading
+                excellent quality steel products for Automotive, Construction, home
+                appliances and general engineering space.
+              </p>
+              <p>
+                At SST, We strive for Trading excellent quality Steel products for
+                Automotive, Construction, Home appliance and general engineering
+                space. Steep rise in demand from our dealer network for our products
+                in these segments has led us to enhance our trading network to
+                Chennai, Erode, Salem and Coimbatore and to endueavour customer
+                expectation in all that we deliver.
+              </p>
+              <p>
+                The company has a strong dealer and distribution network, spread
+                across the length and breadth in of Tamil Nadu from Chennai to
+                Coimbatore which offers a substantial advantage to its customer
+                across the state.
+              </p>
+              <p>
+                Capitalizing on robust business fundamentals, Shunmuga Steel Traders
+                looks forward to rise like the morning sun to brighten the state
+                economy(Supply side)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="aboutTab2" class="tabcontent">
+          <div class="tab-content-2">
+            <h2>Compay Profile</h2>
+            <div class="sub-text">
+              <p>
+                Established in year 1976, Shunmuga Steel Traders is the leading Manufacturer AndTrader of Gp Sheet,
+                Roofing Sheets, Gc Sheet, Ppgl Coils, Galvanized Coil, Coated Coil etc
+              </p>
+              <table>
+
+                <tr>
+                  <td>Nature of Business</td>
+                  <td>Manufacturer</td>
+                </tr>
+                <tr>
+                  <td>Additional Business</td>
+                  <td>Trader</td>
+                </tr>
+                <tr>
+                  <td>Company CEO</td>
+                  <td>Poonamalee Saravanan Yuvaraj</td>
+                </tr>
+                <tr>
+                  <td>Total Number of Employees</td>
+                  <td>11 to 25 People</td>
+                </tr>
+                <tr>
+                  <td>Year of Establishment</td>
+                  <td>1976</td>
+                </tr>
+                <tr>
+                  <td> Legal Status of Firm Individual </td>
+                  <td>Proprietor</td>
+                </tr>
+
+                <tr>
+                  <td>Annual Turnover</td>
+                  <td>Upto Rs. 50 Lakh</td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div id="aboutTab3" class="tabcontent">
+          <div class="tab-content-3">
+            <h2>Board of Directors</h2>
+            <div class="board-card">
+              <img src="./images/yuvi.jpg" alt="Proprietor">
+              <div class="board-container">
+                <h4><b>Yuvaraj</b></h4>
+                <p>Proprietor</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div id="aboutTab4" class="tabcontent">
+          <div class="tab-content-4">
+            <h2> Core Value</h2>
+            <div class="sub-text">
+
+              <h4>Relationship:</h4>
+              <p>
+                A cordial relation with all our stakeholders is of immense value to us at SST. The Synergy amount US
+                and Customers is instrumental in our growth from a single product trading to a multifaceted business
+                house.
+              </p>
+
+              <h4>Teamwork:</h4>
+              <p>
+                It has enabled us ahieve cohesiveness and synergy in pursuit of our common objectives.
+                Excellence:
+                Pursuit of excellence is a habit at SST. We constantly endeavour to exceed customer expectations in
+                all that we deliver. </p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <!-- <footer>
+    <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
+  </footer> -->
+</body>
+
+</html>

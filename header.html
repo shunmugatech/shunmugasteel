@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script>
+        function toggleMenuItems() {
+            const produtMenu = document.getElementById('product-menu');
+            if (produtMenu.className.includes("hide")) {
+                produtMenu.className = "product-menu";
+                document.getElementById('caret-down').className = 'caret-down'
+            } else {
+                produtMenu.className = "product-menu hide";
+                document.getElementById('caret-down').className = 'hide'
+            }
+        }
+
+        function changeURL(url) {
+            window.location.href = `./products/${url}`
+        }
+
+        window.addEventListener('click', function (e) {
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header-company-name">
+                <a href="/">
+                    <img src="./images/shunmuga-logo.png" alt="vel-logo" />
+                </a>
+                <div>
+                    <h1>Shunmuga</h1>
+                    <h3>Steel Traders</h3>
+                </div>
+            </div>
+            <ul class="menu-items">
+                <li class="menu-items-list">
+                    <a href="/" class="href">Home</a>
+                </li>
+                <li class="menu-items-list">
+                    <a href="/about.html" class="href">About us</a>
+                </li>
+                <li class="menu-items-list product-item">
+                    <a onClick="toggleMenuItems()">Product
+                        <span id="caret-down" class="caret-down hide"></span>
+                    </a>
+                    <div id="product-menu" class="product-menu hide">
+                        <div class="product-image-container" onclick="changeURL('gp-coil-sheet.html')">
+                            <a href="">GP coil sheet</a>
+                            <img src="./images/gpsheetcoil.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL()">
+                            <a href="">Color coil sheet</a>
+                            <img src="./images/coloursheet.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('gp-sheet.html')">
+                            <a href="">Galvalume sheet</a>
+                            <img src="./images/galvanized.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL()">
+                            <a href="">Pre painted Galvalume sheet</a>
+                            <img src="./images/jswsheet.jpg" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-items-list">
+                    <a href="#contact-section" class="href">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>

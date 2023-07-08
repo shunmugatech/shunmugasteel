@@ -1,0 +1,20 @@
+.product-container {
+    .second-product {
+        margin-top: 5%;
+    }
+
+    .product-container-text {
+        font-family: 'Helvetica Neue Bold';
+        font-size: 35px;
+        display: block;
+        line-height: 1;
+        margin-top: -20px;
+        color: #16469d;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+        background: url('../images/steel-arrow.png') no-repeat 97% center;
+        padding: 0 44px 0 24px;
+    }
+}
