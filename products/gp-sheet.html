@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Shanumga Steels Traders</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="./product-style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 </head>
@@ -16,33 +15,41 @@
     <header>
         <script>
             function toggleMenuItems() {
-                const produtMenu = document.getElementById('product-menu');
+                const produtMenu = document.getElementById("product-menu");
                 if (produtMenu.className.includes("hide")) {
                     produtMenu.className = "product-menu";
-                    document.getElementById('caret-down').className = 'caret-down'
+                    document.getElementById("caret-down").className = "caret-down";
                 } else {
                     produtMenu.className = "product-menu hide";
-                    document.getElementById('caret-down').className = 'hide'
+                    document.getElementById("caret-down").className = "hide";
                 }
             }
 
             function changeURL(url) {
-                window.location.href = `${url}`
+                window.location.href = `${url}`;
             }
 
-            window.addEventListener('click', function (e) {
-
-            });
+            window.addEventListener("click", function (e) { });
         </script>
+        <div class="header-contact">
+            <div class="header-contact-text">
+                <img src="../images/receiver.png" alt="" />
+                <span>7200240007</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="../images/receiver.png" alt="" />
+                <span>+91 44-29560207</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="../images/email.png" alt="" />
+                <span>Enqurie@shunmugasteel.in</span>
+            </div>
+        </div>
         <nav>
             <div class="header-company-name">
                 <a href="/">
-                    <img src="../images/shunmuga-logo.png" alt="vel-logo" />
+                    <img src="../images/logo.png" alt="vel-logo" />
                 </a>
-                <div>
-                    <h1>Shunmuga</h1>
-                    <h3>Steel Traders</h3>
-                </div>
             </div>
             <ul class="menu-items">
                 <li class="menu-items-list">
@@ -56,27 +63,34 @@
                         <span id="caret-down" class="caret-down hide"></span>
                     </a>
                     <div id="product-menu" class="product-menu hide">
-                        <div class="product-image-container" onclick="changeURL('../products/gp-coil-sheet.html')">
-                            <a href="">GP coil sheet</a>
+                        <div class="product-image-container" onclick="changeURL('cold-rolled-steel.html')">
+                            <a href="">Cold Rolled Steel</a>
+                            <img src="../images/cold-rolled-steel.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('gp-sheet.html')">
+                            <a href="">Galvanized Steel</a>
                             <img src="../images/gpsheetcoil.jpg" alt="" />
                         </div>
-                        <div class="product-image-container" onclick="changeURL('../products/color-coil-sheet.html')">
-                            <a href="">Color coil sheet</a>
+                        <div class="product-image-container" onclick="changeURL('color-sheet.html')">
+                            <a href="">Color coat Steel</a>
                             <img src="../images/coloursheet.png" alt="" />
                         </div>
-                        <div class="product-image-container" onclick="changeURL('../products/gp-sheet.html')">
-                            <a href="">Galvalume sheet</a>
-                            <img src="../images/galvanized.jpeg" alt="" />
+                        <div class="product-image-container" onclick="changeURL('roofing-accessories.html')">
+                            <a href="">Roofing accessories</a>
+                            <img src="../images/roofing-accessories.png" alt="" />
                         </div>
-                        <div class="product-image-container"
-                            onclick="changeURL('../products/pre-painted-galvalume.html')">
-                            <a href="">Pre painted Galvalume sheet</a>
-                            <img src="../images/jswsheet.jpg" alt="" />
+                        <div class="product-image-container" onclick="changeURL('decking-sheet.html')">
+                            <a href="">Decking Sheets</a>
+                            <img src="../images/decking-sheets.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('gp-coil-sheet.html')">
+                            <a href="">GC Sheets</a>
+                            <img src="../images/gc-sheet.jpg" alt="" />
                         </div>
                     </div>
                 </li>
                 <li class="menu-items-list">
-                    <a href="#contact-section" class="href">Contact us</a>
+                    <a href="../contact-us.html" class="href">Contact us</a>
                 </li>
             </ul>
         </nav>
@@ -85,28 +99,61 @@
         </div>
     </header>
     <main>
-        <div class="gp-product">
-
-            <div class="gp-image-banner">
-                <img src="../images/steel-banner-man.jpeg" alt="">
-                <div class="banner-text">
-                    <h3 class="banner-title">GP Coil and</h3>
-                    <h3 class="banner-title">Sheet Manufacturers in Chennai</h3>
-                </div>
+        <div class="product-page">
+            <div class="product-image-banner">
+                <h1>Galvanized Sheets Suppliers</h1>
             </div>
             <div class="product-container">
-                <div>
-                    <img src="../images/galvalume-roll.jpeg" alt="">
-                    <h3 class='product-container-text'>Galvanised Coils</h3>
+                <div class="product-image">
+                    <img src="../images/gpsheetcoil.jpg" alt="" />
                 </div>
-                <div class="second-product">
-                    <h3>Galvanized Products</h3>
-                    <img src="../images/galvanized.jpeg" alt="">
-                    <h3 class='product-container-text'>Galvanised Corrupted Sheet</h3>
+                <div class="product-description">
+                    <h3>Galvanized Sheets</h3>
+                    <br />
+                    <div class="description-section">
+                        <h4>
+                            Galvanized Plain Sheet
+                        </h4>
+                        <p>
+                            A galvanized plain sheet is a type of steel sheet that has been
+                            coated with a layer of zinc to prevent corrosion.
+                        </p>
+                        <p>
+                            The zinc coating protects the steel from rust and other forms of
+                            corrosion, which can extend the sheet's lifespan significantly.
+                        </p>
+                    </div>
+                    <div class="description-section">
+                        <h4>Benefits of Using Galvanized plain Sheets</h4>
+                        <ul>
+                            <li>Corrosion resistance</li>
+                            <li>Durability</li>
+                            <li>Low Maintenance</li>
+                            <li>Cost-effectiveness</li>
+                        </ul>
+                    </div>
+                    <div class="description-section">
+                        <h4>
+                            Galvanized Plain Coil/Sheets available in Variety of Sizes,
+                            thickness and Shapes:
+                        </h4>
+                        <p>
+                        <ul>
+                            <li>Thickness: 0.16mm to 3.00mm</li>
+                            <li>Width: Standard: 910mm, 1000mm, 1055mm, 1400mm, 1500mm</li>
+                            <li>Length: Standard: 1830, 2500 </li>
+                            <li>Brands: AMNS, UTTAM, TATA, JSW</li>
+                            <li>Surface finish: Spangle, Mini Spangle, Zero Spangle</li>
+                        </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<footer>
+    <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
+</footer>
 
 </html>

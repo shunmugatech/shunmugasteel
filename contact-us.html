@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <script>
+            function toggleMenuItems() {
+                const produtMenu = document.getElementById("product-menu");
+                if (produtMenu.className.includes("hide")) {
+                    produtMenu.className = "product-menu";
+                    document.getElementById("caret-down").className = "caret-down";
+                } else {
+                    produtMenu.className = "product-menu hide";
+                    document.getElementById("caret-down").className = "hide";
+                }
+            }
+
+            function changeURL(url) {
+                window.location.href = `${url}`;
+            }
+
+            window.addEventListener("click", function (e) { });
+        </script>
+        <div class="header-contact">
+            <div class="header-contact-text">
+                <img src="./images/receiver.png" alt="" />
+                <span>7200240007</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="./images/receiver.png" alt="" />
+                <span>+91 44-29560207</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="./images/email.png" alt="" />
+                <span>Enqurie@shunmugasteel.in</span>
+            </div>
+        </div>
+        <nav>
+            <div class="header-company-name">
+                <a href="/">
+                    <img src="./images/logo.png" alt="vel-logo" />
+                </a>
+            </div>
+            <ul class="menu-items">
+                <li class="menu-items-list">
+                    <a href="/" class="href">Home</a>
+                </li>
+                <li class="menu-items-list">
+                    <a href="/about.html" class="href">About us</a>
+                </li>
+                <li class="menu-items-list product-item">
+                    <a onClick="toggleMenuItems()">Product
+                        <span id="caret-down" class="caret-down hide"></span>
+                    </a>
+                    <div id="product-menu" class="product-menu hide">
+                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                            <a href="">Cold Rolled Steel</a>
+                            <img src="./images/cold-rolled-steel.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                            <a href="">Galvanized Steel</a>
+                            <img src="./images/gpsheetcoil.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Color coat Steel</a>
+                            <img src="./images/coloursheet.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Roofing accessories</a>
+                            <img src="./images/roofing-accessories.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Decking Sheets</a>
+                            <img src="./images/decking-sheets.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">GC Sheets</a>
+                            <img src="./images/gc-sheet.jpg" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-items-list">
+                    <a href="../contact-us.html" class="href">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="floating-icon">
+            <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
+        </div>
+    </header>
+    <main>
+        <section class="home-contact-section">
+            <h3>Contact us</h3>
+            <div class="home-contact">
+                <img src="./images/contactus.jpg" alt="" />
+                <div class="contact-text">
+                    <h4 class="contact-header">
+                        We would be delighted to hear from you
+                    </h4>
+                    <div>
+                        <p class="contact-subtext">
+                            We're here to help and answer any questions you might have.
+                        </p>
+                        <p class="contact-subtext">We look forward to hearing from you</p>
+                    </div>
+                    <h4 class="contact-header">For all Trade Enquiries</h4>
+                    <button onclick="window.open(`https://wa.me/+917200240007/`,'_blank')">Contact us</button>
+                </div>
+            </div>
+        </section>
+        <section class="address-section">
+            <h3>Address</h3>
+            <div class="address-container">
+                <div class="address-details-container">
+                    <h4>Branch office</h4>
+                    <div class="address-details">
+                        <img src="./images/receiver.png" alt="" />
+                        <span>7200240007</span>
+                    </div>
+                    <div class="address-details">
+                        <img src="./images/location.png" alt="" />
+                        <div>
+                            <p>SHUNMUGA STEEL TRADERS</p>
+                            <p>NO.3/100, RASAPPA STREET,</p>
+                            <p>1st FLOOR, PARK TOWN,</p>
+                            <p>CHENNAI- 600003</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address-details-container">
+                    <h4>Manali Godown</h4>
+                    <div class="address-details">
+                        <img src="./images/receiver.png" alt="" />
+                        <span>7200240007</span>
+                    </div>
+                    <div class="address-details">
+                        <img src="./images/location.png" alt="" />
+                        <div>
+                            <p>C-141,</p>
+                            <p>Sathangadu iron and steel market,</p>
+                            <p>Through : Gate No2</p>
+                            <p>CHENNAI- 600068</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address-details-container">
+                    <h4>Branch office</h4>
+                    <div class="address-details">
+                        <img src="./images/receiver.png" alt="" />
+                        <span>7200240007</span>
+                    </div>
+                    <div class="address-details">
+                        <img src="./images/location.png" alt="" />
+                        <div>
+                            <p>SHUNMUGA STEEL TRADERS</p>
+                            <p>NO.3/100, RASAPPA STREET,</p>
+                            <p>1st FLOOR, PARK TOWN,</p>
+                            <p>CHENNAI- 600003</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address-details-container">
+                    <h4>Branch office</h4>
+                    <div class="address-details">
+                        <img src="./images/receiver.png" alt="" />
+                        <span>7200240007</span>
+                    </div>
+                    <div class="address-details">
+                        <img src="./images/location.png" alt="" />
+                        <div>
+                            <p>SHUNMUGA STEEL TRADERS</p>
+                            <p>NO.3/100, RASAPPA STREET,</p>
+                            <p>1st FLOOR, PARK TOWN,</p>
+                            <p>CHENNAI- 600003</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
+    </footer>
+</body>
+
+</html>

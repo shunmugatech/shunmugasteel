@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <script>
+            function toggleMenuItems() {
+                const produtMenu = document.getElementById("product-menu");
+                if (produtMenu.className.includes("hide")) {
+                    produtMenu.className = "product-menu";
+                    document.getElementById("caret-down").className = "caret-down";
+                } else {
+                    produtMenu.className = "product-menu hide";
+                    document.getElementById("caret-down").className = "hide";
+                }
+            }
+
+            function changeURL(url) {
+                window.location.href = `${url}`;
+            }
+
+            window.addEventListener("click", function (e) { });
+        </script>
+        <div class="header-contact">
+            <div class="header-contact-text">
+                <img src="./images/receiver.png" alt="" />
+                <span>7200240007</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="./images/receiver.png" alt="" />
+                <span>+91 44-29560207</span>
+            </div>
+            <div class="header-contact-text">
+                <img src="./images/email.png" alt="" />
+                <span>Enqurie@shunmugasteel.in</span>
+            </div>
+        </div>
+        <nav>
+            <div class="header-company-name">
+                <a href="/">
+                    <img src="./images/logo.png" alt="vel-logo" />
+                </a>
+            </div>
+            <ul class="menu-items">
+                <li class="menu-items-list">
+                    <a href="/" class="href">Home</a>
+                </li>
+                <li class="menu-items-list">
+                    <a href="/about.html" class="href">About us</a>
+                </li>
+                <li class="menu-items-list product-item">
+                    <a onClick="toggleMenuItems()">Product
+                        <span id="caret-down" class="caret-down hide"></span>
+                    </a>
+                    <div id="product-menu" class="product-menu hide">
+                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                            <a href="">Cold Rolled Steel</a>
+                            <img src="./images/cold-rolled-steel.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                            <a href="">Galvanized Steel</a>
+                            <img src="./images/gpsheetcoil.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Color coat Steel</a>
+                            <img src="./images/coloursheet.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Roofing accessories</a>
+                            <img src="./images/roofing-accessories.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">Decking Sheets</a>
+                            <img src="./images/decking-sheets.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./products/color-coil-sheet.html')">
+                            <a href="">GC Sheets</a>
+                            <img src="./images/gc-sheet.jpg" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-items-list">
+                    <a href="../contact-us.html" class="href">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="floating-icon">
+            <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>When an unknown printer took a galley of type and scrambled area clear make a type specimen book It
+                    has survived not only five etair area they centuries whenan took.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <img src="./images/location.png" alt="">
+                        <div>
+                            <h4>Our head office address</h4>
+                            <p>G-711 (A), Road No.9F3, V.K.I. Area, Jaipur</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="./images/location.png" alt="">
+                        <div>
+                            <h4>Our head office address</h4>
+                            <p>G-711 (A), Road No.9F3, V.K.I. Area, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-div">
+                <h2>Send Us Message</h2>
+                <form action="">
+                    <input type="text" name="name" placeholder="Name *" />
+                    <input type="text" name="email" placeholder="E-mail *" />
+                    <input type="number" max="10" name="phone" placeholder="Phone *" />
+                    <input type="text" name="address" placeholder="Address *" />
+                    <button>Send message</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
