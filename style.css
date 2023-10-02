@@ -9,6 +9,7 @@ body {
   font-size: 14px;
   scroll-behavior: smooth;
   height: 100vh;
+  width: 100%;
   position: relative;
   color: #1e2d3b;
   background-color: whitesmoke;
@@ -57,20 +58,16 @@ body .caret-down {
 body .hide {
   display: none !important;
 }
-body header {
-  height: 115px;
-}
 body header .header-contact {
-  display: flex;
-  gap: 20px;
-  flex-direction: row-reverse;
-  margin: 8px 6rem;
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.15fr;
   color: #16469d;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 10px 10px;
 }
 body header .header-contact .header-contact-text {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 body header .header-contact img {
@@ -84,7 +81,6 @@ body header .floating-icon {
   right: 20px;
 }
 body header nav {
-  position: absolute;
   width: 100%;
   height: 5.5rem;
   background-color: #1e2d3b;
@@ -92,6 +88,10 @@ body header nav {
   justify-content: space-between;
   z-index: 100;
   cursor: pointer;
+  position: relative;
+}
+body header nav .mobile-menu {
+  display: none;
 }
 body header nav .header-company-name {
   display: flex;
@@ -437,11 +437,6 @@ body main .carousel-section .content .links.slide-left {
 }
 body main .carousel-section .content .links {
   opacity: 0;
-  /* align-items: center; */
-  display: flex;
-  /* align-items: center; */
-  justify-content: flex-end;
-  width: 50%;
 }
 body main .carousel-section .content .links a {
   color: #fff;
@@ -641,4 +636,80 @@ body footer {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for screens up to 600px */
+  body header .header-contact {
+    color: #16469d;
+    /* display: block; */
+    margin: 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body header .mobile-menu-items {
+    margin-top: 30px;
+  }
+  body header .mobile-menu-items ul {
+    background-color: #1e2d3b;
+  }
+  body header .mobile-menu-items ul li {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    border-bottom: 2px solid white;
+  }
+  body header .mobile-menu-items ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  body header nav .menu-items {
+    display: none;
+  }
+  body header nav .mobile-menu {
+    display: block;
+  }
+  body header nav .mobile-menu img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body main .home-contact-section {
+    display: block;
+  }
+  body main .home-contact-section .home-contact {
+    flex-direction: column;
+  }
+  body main .home-contact-section .home-contact .contact-text {
+    gap: 20px;
+  }
+  body main .product-section .product-subtext {
+    text-align: center;
+  }
+  body main .product-section .product-container {
+    grid-template-columns: 1fr;
+  }
+  body main .address-section .address-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 40px;
+  }
+  body main .carousel-section {
+    height: 50vh;
+  }
+  body main .carousel-section .content h1 {
+    font-size: 75px;
+  }
+  body main .about-section .about-tab {
+    flex-direction: column;
+  }
+  body .product-page .product-container {
+    flex-direction: column;
+  }
+}
+/* Styles for screens with a minimum width of 601px and a maximum of 900px (e.g., tablets) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Styles for screens between 601px and 900px */
 }/*# sourceMappingURL=style.css.map */
