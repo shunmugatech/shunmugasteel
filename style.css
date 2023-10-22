@@ -219,7 +219,6 @@ body main .product-section {
   justify-content: center;
   font-size: 20px;
   flex-direction: column;
-  margin-bottom: 5rem;
 }
 body main .product-section .product-subtext {
   margin-bottom: 20px;
@@ -293,7 +292,7 @@ body main .home-contact-section .home-contact .contact-text {
   display: grid;
   grid-row: 1fr 1fr 1fr;
   flex-direction: column;
-  align-content: space-between;
+  align-content: space-around;
 }
 body main .home-contact-section .home-contact .contact-header {
   font-size: 20px;
@@ -413,6 +412,9 @@ body main .carousel-section .content {
   margin: 5%;
   color: white;
 }
+body main .carousel-section .content .header1 {
+  display: none;
+}
 body main .carousel-section .content .slide-left {
   animation: slideleft 1s linear forwards;
 }
@@ -437,6 +439,9 @@ body main .carousel-section .content p {
   margin-bottom: 20px;
   opacity: 0;
   font-size: 25px;
+}
+body main .carousel-section .content p.slide-left.header1 {
+  animation-delay: 0.5s;
 }
 body main .carousel-section .content p.slide-left {
   animation-delay: 1s;
@@ -651,7 +656,7 @@ body footer {
   /* Styles for screens up to 600px */
   body header .whatsapp-icon {
     position: fixed;
-    bottom: 100px;
+    bottom: 5rem;
     z-index: 1;
     right: 20px;
   }
@@ -708,6 +713,12 @@ body footer {
   body main .contact-group button a {
     color: white;
   }
+  body main .contact-group button a:visited {
+    color: #1e2d3b;
+  }
+  body main .contact-group button a:focus {
+    color: #1e2d3b;
+  }
   body main .home-contact-section {
     display: block;
   }
@@ -729,9 +740,13 @@ body footer {
     flex-direction: column;
     margin-left: 40px;
   }
+  body main .carousel-section .content .header1 {
+    display: block;
+    font-size: 40px;
+    line-height: 70px;
+  }
   body main .carousel-section .content h1 {
-    font-size: 60px;
-    line-height: 100px;
+    display: none;
   }
   body main .about-section .about-tab {
     flex-direction: column;
