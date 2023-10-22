@@ -734,6 +734,9 @@ body footer {
   body main .product-section .product-container {
     grid-template-columns: 1fr;
   }
+  body main .address-section {
+    padding-bottom: 4rem;
+  }
   body main .address-section .address-container {
     display: flex;
     justify-content: space-around;
