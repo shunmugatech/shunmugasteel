@@ -43,15 +43,15 @@
     <div class="header-contact">
       <div class="header-contact-text">
         <img src="./images/receiver.png" alt="" />
-        <span>7200240007</span>
+        <span><a href="tel:7200240007">7200240007</a></span>
       </div>
       <div class="header-contact-text">
         <img src="./images/receiver.png" alt="" />
-        <span>+91 44-29560207</span>
+        <span><a href="tel:+91 44-29560207">+91 44-29560207</a></span>
       </div>
       <div class="header-contact-text">
         <img src="./images/email.png" alt="" />
-        <span>enquiry@shunmugasteel.in</span>
+        <span><a href="mailto:enquiry@shunmugasteel.in">enquiry@shunmugasteel.in</a></span>
       </div>
     </div>
     <nav>
@@ -103,45 +103,56 @@
         </li>
       </ul>
       <div class="mobile-menu">
-        <img src="./images/small-menu.png" alt="" onclick="toggleMenuListItems()">
-
+        <img src="./images/small-menu.png" alt="" onclick="toggleMenuListItems()" />
       </div>
     </nav>
     <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
       <ul>
-        <li onclick="changeURL('./products/cold-rolled-steel.html')"> <span>Cold Rolled Steel</span> </li>
-        <li onclick="changeURL('./products/gp-sheet.html')"> <span> Galvanized Steel</span> </li>
-        <li onclick=" changeURL('./products/color-sheet.html')"> <span>Color coat Steel</span> </li>
-        <li onclick=" changeURL('./products/roofing-accessories.html')"> <span>Roofing accessories</span> </li>
-        <li onclick=" changeURL('./products/decking-sheet.html')"> <span>Decking Sheets</span> </li>
-        <li onclick=" changeURL('./products/gp-coil-sheet.html')"> <span>GC Sheets</span></li>
-        <li onclick=" changeURL('./about.html')"> <span> About us</span> </li>
-        <li onclick=" changeURL('./contact-us.html')"> <span>Contact us</span> </li>
-
+        <li onclick="changeURL('./products/cold-rolled-steel.html')">
+          <span>Cold Rolled Steel</span>
+        </li>
+        <li onclick="changeURL('./products/gp-sheet.html')">
+          <span> Galvanized Steel</span>
+        </li>
+        <li onclick=" changeURL('./products/color-sheet.html')">
+          <span>Color coat Steel</span>
+        </li>
+        <li onclick=" changeURL('./products/roofing-accessories.html')">
+          <span>Roofing accessories</span>
+        </li>
+        <li onclick=" changeURL('./products/decking-sheet.html')">
+          <span>Decking Sheets</span>
+        </li>
+        <li onclick=" changeURL('./products/gp-coil-sheet.html')">
+          <span>GC Sheets</span>
+        </li>
+        <li onclick=" changeURL('./about.html')"><span> About us</span></li>
+        <li onclick=" changeURL('./contact-us.html')">
+          <span>Contact us</span>
+        </li>
       </ul>
     </div>
 
-    <div class=" floating-icon">
+    <div class="whatsapp-icon">
       <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
     </div>
   </header>
   <main>
     <section class="carousel-section">
       <div class="content">
-        <h1 class="slide-left">One Stop<br />Purchase</h1>
-        <p class="slide-left">
-          Destination for all your steel needs.
-        </p>
-        <div class="links slide-left">
-          <a href="https://wa.me/+917200240007/" target="_blank" class="btn"> Contact Us</a>
-        </div>
+        <h1 class="slide-left">One Stop<br />Steel Buy</h1>
+        <p class="slide-left">Destination for all your steel needs.</p>
       </div>
     </section>
+    <div class="contact-group">
+      <button><a href="tel:+91 44-29560207">Call Us</a></button>
+      <button><a href="mailto:enquiry@shunmugasteel.in">Email</a></button>
+    </div>
     <section class="product-section">
       <h3 id="product-section">Products</h3>
-      <h4 class="product-subtext">
+      <!-- <h4 class="product-subtext">
         Extensive Range of Steel Products / Brands / Services Under One Roof
-      </h4>
+      </h4> -->
       <div class="product-container">
         <div class="product-details" onclick="changeURL('./products/cold-rolled-steel.html')">
           <img src="./images/cold-rolled-steel.jpg" alt="" />
@@ -197,7 +208,9 @@
             <p class="contact-subtext">We look forward to hearing from you</p>
           </div>
           <h4 class="contact-header">For all Trade Enquiries</h4>
-          <button onclick="window.open('https://wa.me/+917200240007/')">Contact us</button>
+          <button onclick="window.open('https://wa.me/+917200240007/')">
+            Contact us
+          </button>
         </div>
       </div>
     </section>

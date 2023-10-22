@@ -17,6 +17,9 @@ body {
   line-height: 1.3;
   /* CSS */
 }
+body a {
+  text-decoration: none;
+}
 body button {
   background-color: #1e2d3b;
   border: 1px solid #dbdbdb;
@@ -60,7 +63,7 @@ body .hide {
 }
 body header .header-contact {
   display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.15fr;
+  grid-template-columns: 0.1fr 0.16fr 0.15fr;
   color: #16469d;
   justify-content: flex-end;
   gap: 10px;
@@ -74,11 +77,15 @@ body header .header-contact img {
   height: 20px;
   width: 20px;
 }
-body header .floating-icon {
+body header .whatsapp-icon {
   position: fixed;
-  bottom: 10px;
-  z-index: 100;
+  bottom: 60px;
+  z-index: 1;
   right: 20px;
+}
+body header .whatsapp-icon img {
+  height: 55px;
+  width: 55px;
 }
 body header nav {
   width: 100%;
@@ -193,6 +200,9 @@ body main {
   justify-content: center;
   align-items: center;
 }
+body main .contact-group {
+  display: none;
+}
 body main section {
   margin: 20px;
   font-weight: 300;
@@ -220,7 +230,7 @@ body main .product-section .product-container {
   gap: 10px;
 }
 body main .product-section .product-container .product-details {
-  width: 300px;
+  width: 350px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -229,7 +239,7 @@ body main .product-section .product-container .product-details {
   margin-bottom: 5rem;
 }
 body main .product-section .product-container .product-details img {
-  width: 300px;
+  width: 100%;
   height: 250px;
   display: block;
   margin-left: auto;
@@ -241,7 +251,7 @@ body main .product-section .product-container .product-details .product-card {
   height: 100px;
   background-color: white;
   bottom: -3rem;
-  right: 3rem;
+  right: 4rem;
   text-align: center;
   display: flex;
   align-items: center;
@@ -396,13 +406,11 @@ body main .our-products-section .slider .slide {
 }
 body main .carousel-section {
   width: 100%;
-  height: 100vh;
   background-image: linear-gradient(rgba(5, 0, 136, 0.5), rgba(5, 0, 136, 0.5)), url(images/banner.webp);
   margin-top: 0px;
 }
 body main .carousel-section .content {
-  margin-top: 10%;
-  margin-left: 7%;
+  margin: 5%;
   color: white;
 }
 body main .carousel-section .content .slide-left {
@@ -419,15 +427,16 @@ body main .carousel-section .content .slide-left {
   }
 }
 body main .carousel-section .content h1 {
-  font-size: 120px;
+  font-size: 100px;
   line-height: 140px;
-  font-weight: 600;
+  font-weight: 500;
 }
 body main .carousel-section .content p {
   max-width: 500px;
   line-height: 28px;
   margin-bottom: 20px;
   opacity: 0;
+  font-size: 25px;
 }
 body main .carousel-section .content p.slide-left {
   animation-delay: 1s;
@@ -640,12 +649,18 @@ body footer {
 
 @media only screen and (max-width: 600px) {
   /* Styles for screens up to 600px */
+  body header .whatsapp-icon {
+    position: fixed;
+    bottom: 100px;
+    z-index: 1;
+    right: 20px;
+  }
+  body header .whatsapp-icon img {
+    height: 88px;
+    width: 88px;
+  }
   body header .header-contact {
-    color: #16469d;
-    /* display: block; */
-    margin: 20px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: none;
   }
   body header .mobile-menu-items {
     margin-top: 30px;
@@ -675,6 +690,24 @@ body footer {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  body main .contact-group {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+  }
+  body main .contact-group button {
+    border-radius: 0px;
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body main .contact-group button a {
+    color: white;
+  }
   body main .home-contact-section {
     display: block;
   }
@@ -696,11 +729,9 @@ body footer {
     flex-direction: column;
     margin-left: 40px;
   }
-  body main .carousel-section {
-    height: 50vh;
-  }
   body main .carousel-section .content h1 {
-    font-size: 75px;
+    font-size: 60px;
+    line-height: 100px;
   }
   body main .about-section .about-tab {
     flex-direction: column;
