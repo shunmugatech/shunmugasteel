@@ -106,11 +106,11 @@ body {
 
     nav {
       width: 100%;
-      height: 5.5rem;
+      height: 8rem;
       background-color: #1e2d3b;
       display: flex;
       justify-content: space-between;
-      z-index: 100;
+      z-index: 1;
       cursor: pointer;
       position: relative;
 
@@ -124,7 +124,7 @@ body {
         justify-content: center;
 
         img {
-          height: 10rem;
+          height: 8.8rem;
         }
       }
 
@@ -819,8 +819,6 @@ body {
   /* Styles for screens up to 600px */
   body {
 
-
-
     header {
 
       .whatsapp-icon {
@@ -830,8 +828,8 @@ body {
         right: 20px;
 
         img {
-          height: 88px;
-          width: 88px;
+          height: 66px;
+          width: 66px;
         }
       }
 
@@ -840,7 +838,9 @@ body {
       }
 
       .mobile-menu-items {
-        margin-top: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transition: all .5s ease-in-out;
 
         ul {
           background-color: #1e2d3b;
@@ -852,6 +852,7 @@ body {
             font-size: 17px;
             display: block;
             border-bottom: 2px solid white;
+            transition: all .2s ease;
 
             a {
               text-decoration: none;
@@ -868,6 +869,8 @@ body {
 
         .mobile-menu {
           display: block;
+          margin-top: 20px;
+          margin-right: 10px;
 
 
           img {

@@ -25,6 +25,15 @@
                 }
             }
 
+            function toggleMenuListItems() {
+                const mobileMenu = document.getElementById("mobile-menu-items");
+                if (mobileMenu.className.includes("hide")) {
+                    mobileMenu.className = "mobile-menu-items";
+                } else {
+                    mobileMenu.className = "mobile-menu-items hide";
+                }
+            }
+
             function changeURL(url) {
                 window.location.href = `${url}`;
             }
@@ -93,8 +102,37 @@
                     <a href="../contact-us.html" class="href">Contact us</a>
                 </li>
             </ul>
+            <div class="mobile-menu">
+                <img src="./images/small-menu.png" alt="" onclick="toggleMenuListItems()" />
+            </div>
         </nav>
-        <div class="floating-icon">
+        <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
+            <ul>
+                <li onclick="changeURL('./products/cold-rolled-steel.html')">
+                    <span>Cold Rolled Steel</span>
+                </li>
+                <li onclick="changeURL('./products/gp-sheet.html')">
+                    <span> Galvanized Steel</span>
+                </li>
+                <li onclick=" changeURL('./products/color-sheet.html')">
+                    <span>Color coat Steel</span>
+                </li>
+                <li onclick=" changeURL('./products/roofing-accessories.html')">
+                    <span>Roofing accessories</span>
+                </li>
+                <li onclick=" changeURL('./products/decking-sheet.html')">
+                    <span>Decking Sheets</span>
+                </li>
+                <li onclick=" changeURL('./products/gp-coil-sheet.html')">
+                    <span>GC Sheets</span>
+                </li>
+                <li onclick=" changeURL('/about.html')"><span> About us</span></li>
+                <li onclick=" changeURL('/contact-us.html')">
+                    <span>Contact us</span>
+                </li>
+            </ul>
+        </div>
+        <div class="whatsapp-icon">
             <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
         </div>
     </header>
@@ -118,6 +156,10 @@
                 </div>
             </div>
         </section>
+        <div class="contact-group">
+            <button><a href="tel:+91 44-29560207">Call Us</a></button>
+            <button><a href="mailto:enquiry@shunmugasteel.in">Email</a></button>
+        </div>
         <section class="address-section">
             <h3>Address</h3>
             <div class="address-container">
