@@ -42,7 +42,10 @@ body button:focus {
   border-color: #485fc7;
   outline: 0;
 }
-body button:hover {
+body button:hover,
+body button:visited,
+body button:focus,
+body button:active {
   border-color: #b5b5b5;
   background-color: white;
   color: #363636;

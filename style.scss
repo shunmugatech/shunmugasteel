@@ -48,11 +48,16 @@ body {
     outline: 0;
   }
 
-  button:hover {
+  button:hover,
+  button:visited,
+  button:focus,
+  button:active {
     border-color: #b5b5b5;
     background-color: white;
     color: #363636;
   }
+
+
 
   button:focus:not(:active) {
     box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
