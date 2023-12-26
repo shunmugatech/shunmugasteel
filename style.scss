@@ -115,6 +115,18 @@ body {
 
     }
 
+    .caller-icon {
+      position: fixed;
+      bottom: 8rem;
+      z-index: 1;
+      right: 7px;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+
     .whatsapp-icon {
       position: fixed;
       bottom: 60px;
@@ -124,6 +136,19 @@ body {
       img {
         height: 55px;
         width: 55px;
+      }
+    }
+
+
+    .caller-icon {
+      position: fixed;
+      bottom: 10rem;
+      z-index: 1;
+      right: 12px;
+
+      img {
+        height: 100px;
+        width: 100px;
       }
     }
 
@@ -610,8 +635,10 @@ body {
       }
 
       .address-container {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 20px;
 
         .address-details-container {
           h4 {
