@@ -947,18 +947,14 @@ body {
           align-items: center;
           justify-content: center;
 
-          a {
+          span {
             color: white;
           }
 
-          a:visited {
-            color: #1e2d3b;
-            ;
-          }
-
+          a:visited,
+          a:active,
           a:focus {
             color: #1e2d3b;
-            ;
           }
         }
       }
