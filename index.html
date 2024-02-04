@@ -14,6 +14,7 @@
 <body>
   <header>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V1JVY3V9P"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       function toggleMenuItems() {
         const produtMenu = document.getElementById("product-menu");
@@ -53,8 +54,8 @@
 
       function handleCallUs() {
         // Create a link with the tel: attribute
-        const telLink = document.createElement('a');
-        telLink.href = 'tel:7200240007';
+        const telLink = document.createElement("a");
+        telLink.href = "tel:7200240007";
 
         // Append the link to the document
         document.body.appendChild(telLink);
@@ -69,18 +70,19 @@
 
       function handleEmailUs() {
         // Replace with your email address
-        const emailAddress = 'enquiry@shunmugasteel.in';
+        const emailAddress = "enquiry@shunmugasteel.in";
 
         // Construct the mailto URL
-        const mailtoUrl = 'mailto:' + emailAddress;
+        const mailtoUrl = "mailto:" + emailAddress;
 
         // Open the default email client
         window.location.href = mailtoUrl;
       }
+
     </script>
+    <script src="./form-validate.js"></script>
 
     <div class="header-contact">
-
       <div class="header-phone">
         <div class="header-contact-text">
           <img src="./images/receiver.png" alt="" />
@@ -148,7 +150,7 @@
               <a href="">Decking Sheets</a>
               <img src="./images/decking-sheets.jpeg" alt="" />
             </div>
-            <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+            <div class="product-image-container" onclick="changeURL('./products/gc-sheet.html')">
               <a href="">GC Sheets</a>
               <img src="./images/products/GC-sheet.jpg" alt="" />
             </div>
@@ -179,7 +181,7 @@
         <li onclick=" changeURL('./products/decking-sheet.html')">
           <span>Decking Sheets</span>
         </li>
-        <li onclick=" changeURL('./products/gp-coil-sheet.html')">
+        <li onclick=" changeURL('./products/gc-sheet.html')">
           <span>GC Sheets</span>
         </li>
         <li onclick=" changeURL('./about.html')"><span> About us</span></li>
@@ -243,7 +245,7 @@
           </article>
         </div>
         <div class="product-details">
-          <img src="./images/products/GC-sheet.jpg" alt="" onclick="changeURL('./products/gp-coil-sheet.html')" />
+          <img src="./images/products/GC-sheet.jpg" alt="" onclick="changeURL('./products/gc-sheet.html')" />
           <article class="product-card">
             <h4 class="product-title">GC Sheets</h4>
           </article>
@@ -254,15 +256,42 @@
       <h3>Contact us</h3>
       <div class="home-contact">
         <img src="./images/contactus.jpg" alt="" />
-        <div class="contact-text">
+        <div class="contact-form-container">
           <h4 class="contact-header">
             We would be delighted to hear from you
           </h4>
-          <h4 class="contact-header">For all Trade Enquiries</h4>
+          <form id="emailForm" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="fromName" name="fromName" required />
+            <span id="name-required" style="color: red; display: none">
+              Name is Required</span>
+            <br />
 
-          <button onclick="window.open('https://wa.me/+917200240007/')">
-            Contact us
-          </button>
+            <label for="emailID">Email ID:</label>
+            <input type="email" id="emailID" name="emailID" required />
+            <span id="email-required" style="color: red; display: none">
+              Email is Required</span>
+            <span id="email-valid" style="color: red; display: none">
+              Email is not valid</span><br />
+
+            <label for="phoneNo">Phone Number:</label>
+            <input type="tel" id="phoneNo" name="phoneNo" required />
+            <span id="number-required" style="color: red; display: none">
+              Phone Number is Required</span>
+            <span id="number-valid" style="color: red; display: none">
+              Phone Number is not valid</span><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span id="message-required" style="color: red; display: none">
+              Message is Required</span>
+            <span style="color: green; display: none" id="send-success">
+              Thank you for your message.</span>
+            <span style="color: red; display: none" id="send-failed">
+              Error occured kindly retry.</span>
+            <br />
+            <button onclick="validateForm(event)">Send Email</button>
+          </form>
         </div>
       </div>
     </section>
@@ -313,13 +342,50 @@
             </div>
           </div>
         </div>
-        <div style="display:flex;gap:10px">
+        <div style="display: flex; gap: 10px">
           <h4>Contact:</h4>
           <h4>+91 7200240007</h4>
         </div>
       </div>
-
     </section>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <form id="emailForm" class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="fromName" name="fromName" required />
+          <span id="name-required" style="color: red; display: none">
+            Name is Required</span>
+          <br />
+
+          <label for="emailID">Email ID:</label>
+          <input type="email" id="emailID" name="emailID" required />
+          <span id="email-required" style="color: red; display: none">
+            Email is Required</span>
+          <span id="email-valid" style="color: red; display: none">
+            Email is not valid</span><br />
+
+          <label for="phoneNo">Phone Number:</label>
+          <input type="tel" id="phoneNo" name="phoneNo" required />
+          <span id="number-required" style="color: red; display: none">
+            Phone Number is Required</span>
+          <span id="number-valid" style="color: red; display: none">
+            Phone Number is not valid</span><br />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <span id="message-required" style="color: red; display: none">
+            Message is Required</span>
+          <span style="color: green; display: none" id="send-success">
+            Thank you for your message.</span>
+          <span style="color: red; display: none" id="send-failed">
+            Error occured kindly retry.</span>
+          <br />
+          <button onclick="validateForm(event)">Send Email</button>
+        </form>
+      </div>
+    </div>
   </main>
   <footer>
     <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>

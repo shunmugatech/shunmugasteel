@@ -17,6 +17,9 @@ body {
   line-height: 1.3;
   /* CSS */
 }
+body .modal {
+  display: none;
+}
 body a {
   text-decoration: none;
 }
@@ -323,15 +326,21 @@ body main .home-contact-section .home-contact {
 body main .home-contact-section .home-contact img {
   max-width: 500px;
 }
-body main .home-contact-section .home-contact .contact-text {
-  display: grid;
-  grid-row: 1fr 1fr 1fr;
+body main .home-contact-section .home-contact .contact-form-container form {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-content: space-around;
+}
+body main .home-contact-section .home-contact .contact-form-container form input,
+body main .home-contact-section .home-contact .contact-form-container form textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid darkgray;
 }
 body main .home-contact-section .home-contact .contact-header {
   font-size: 20px;
   text-align: center;
+  margin-bottom: 10px;
 }
 body main .home-contact-section .home-contact .contact-subtext {
   font-size: 18px;
@@ -738,6 +747,11 @@ body footer {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  body main {
+    /* The Modal (background) */
+    /* Modal Content/Box */
+    /* The Close Button */
+  }
   body main .contact-group {
     display: flex;
     position: fixed;
@@ -753,12 +767,11 @@ body footer {
     align-items: center;
     justify-content: center;
   }
-  body main .contact-group button a {
+  body main .contact-group button span {
     color: white;
   }
-  body main .contact-group button a:visited {
-    color: #1e2d3b;
-  }
+  body main .contact-group button a:visited,
+  body main .contact-group button a:active,
   body main .contact-group button a:focus {
     color: #1e2d3b;
   }
@@ -767,9 +780,6 @@ body footer {
   }
   body main .home-contact-section .home-contact {
     flex-direction: column;
-  }
-  body main .home-contact-section .home-contact .contact-text {
-    gap: 20px;
   }
   body main .product-section .product-subtext {
     text-align: center;
@@ -796,6 +806,56 @@ body footer {
   }
   body main .about-section .about-tab {
     flex-direction: column;
+  }
+  body main .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+  body main .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  body main .modal-content .contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body main .modal-content .contact-form input,
+  body main .modal-content .contact-form textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+  }
+  body main .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  body main .close:hover,
+  body main .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
   body .product-page .product-container {
     flex-direction: column;

@@ -13,7 +13,8 @@
 
 <body>
     <header>
-        <script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script defer>
             function toggleMenuItems() {
                 const produtMenu = document.getElementById("product-menu");
                 if (produtMenu.className.includes("hide")) {
@@ -40,8 +41,8 @@
 
             window.addEventListener("click", function (e) { });
         </script>
+        <script src="./form-validate.js"></script>
         <div class="header-contact">
-
             <div class="header-phone">
                 <div class="header-contact-text">
                     <img src="./images/receiver.png" alt="" />
@@ -89,11 +90,11 @@
                         <span id="caret-down" class="caret-down hide"></span>
                     </a>
                     <div id="product-menu" class="product-menu hide">
-                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                        <div class="product-image-container" onclick="changeURL('./products/gc-sheet.html')">
                             <a href="">Cold Rolled Steel</a>
                             <img src="./images/cold-rolled-steel.jpg" alt="" />
                         </div>
-                        <div class="product-image-container" onclick="changeURL('./products/gp-coil-sheet.html')">
+                        <div class="product-image-container" onclick="changeURL('./products/gc-sheet.html')">
                             <a href="">Galvanized Steel</a>
                             <img src="./images/products/GP-sheet.jpg" alt="" />
                         </div>
@@ -140,7 +141,7 @@
                 <li onclick=" changeURL('./products/decking-sheet.html')">
                     <span>Decking Sheets</span>
                 </li>
-                <li onclick=" changeURL('./products/gp-coil-sheet.html')">
+                <li onclick=" changeURL('./products/gc-sheet.html')">
                     <span>GC Sheets</span>
                 </li>
                 <li onclick=" changeURL('/about.html')"><span> About us</span></li>
@@ -158,18 +159,42 @@
             <h3>Contact us</h3>
             <div class="home-contact">
                 <img src="./images/contactus.jpg" alt="" />
-                <div class="contact-text">
+                <div class="contact-form-container">
                     <h4 class="contact-header">
                         We would be delighted to hear from you
                     </h4>
-                    <div>
-                        <p class="contact-subtext">
-                            We're here to help and answer any questions you might have.
-                        </p>
-                        <p class="contact-subtext">We look forward to hearing from you</p>
-                    </div>
-                    <h4 class="contact-header">For all Trade Enquiries</h4>
-                    <button onclick="window.open(`https://wa.me/+917200240007/`,'_blank')">Contact us</button>
+                    <form id="emailForm" class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="fromName" name="fromName" required />
+                        <span id="name-required" style="color: red; display: none">
+                            Name is Required</span>
+                        <br />
+
+                        <label for="emailID">Email ID:</label>
+                        <input type="email" id="emailID" name="emailID" required />
+                        <span id="email-required" style="color: red; display: none">
+                            Email is Required</span>
+                        <span id="email-valid" style="color: red; display: none">
+                            Email is not valid</span><br />
+
+                        <label for="phoneNo">Phone Number:</label>
+                        <input type="tel" id="phoneNo" name="phoneNo" required />
+                        <span id="number-required" style="color: red; display: none">
+                            Phone Number is Required</span>
+                        <span id="number-valid" style="color: red; display: none">
+                            Phone Number is not valid</span><br />
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <span id="message-required" style="color: red; display: none">
+                            Message is Required</span>
+                        <span style="color: green; display: none" id="send-success">
+                            Thank you for your message.</span>
+                        <span style="color: red; display: none" id="send-failed">
+                            Error occured kindly retry.</span>
+                        <br />
+                        <button onclick="validateForm(event)">Send Email</button>
+                    </form>
                 </div>
             </div>
         </section>
