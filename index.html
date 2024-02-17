@@ -1,395 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shanumga Steels Traders</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-</head>
-
-<body>
-  <header>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V1JVY3V9P"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      function toggleMenuItems() {
-        const produtMenu = document.getElementById("product-menu");
-        if (produtMenu.className.includes("hide")) {
-          produtMenu.className = "product-menu";
-          document.getElementById("caret-down").className = "caret-down";
-        } else {
-          produtMenu.className = "product-menu hide";
-          document.getElementById("caret-down").className = "hide";
+  <body>
+    <header>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-0V1JVY3V9P"
+      ></script>
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        function toggleMenuItems() {
+          const produtMenu = document.getElementById("product-menu");
+          if (produtMenu.className.includes("hide")) {
+            produtMenu.className = "product-menu";
+            document.getElementById("caret-down").className = "caret-down";
+          } else {
+            produtMenu.className = "product-menu hide";
+            document.getElementById("caret-down").className = "hide";
+          }
         }
-      }
 
-      function toggleMenuListItems() {
-        const mobileMenu = document.getElementById("mobile-menu-items");
-        if (mobileMenu.className.includes("hide")) {
-          mobileMenu.className = "mobile-menu-items";
-        } else {
-          mobileMenu.className = "mobile-menu-items hide";
+        function toggleMenuListItems() {
+          const mobileMenu = document.getElementById("mobile-menu-items");
+          if (mobileMenu.className.includes("hide")) {
+            mobileMenu.className = "mobile-menu-items";
+          } else {
+            mobileMenu.className = "mobile-menu-items hide";
+          }
         }
-      }
 
-      function changeURL(url) {
-        window.location.href = `${url}`;
-      }
+        function changeURL(url) {
+          window.location.href = `${url}`;
+        }
 
-      function changeURLNewWindow(url) {
-        window.open(url, "_blank");
-      }
+        function changeURLNewWindow(url) {
+          window.open(url, "_blank");
+        }
 
-      window.addEventListener("click", function (e) { });
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-0V1JVY3V9P");
+        window.addEventListener("click", function (e) {});
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-0V1JVY3V9P");
 
-      function handleCallUs() {
-        // Create a link with the tel: attribute
-        const telLink = document.createElement("a");
-        telLink.href = "tel:7200240007";
+        function handleCallUs() {
+          // Create a link with the tel: attribute
+          const telLink = document.createElement("a");
+          telLink.href = "tel:7200240007";
 
-        // Append the link to the document
-        document.body.appendChild(telLink);
+          // Append the link to the document
+          document.body.appendChild(telLink);
 
-        // Trigger a click on the link
-        telLink.click();
+          // Trigger a click on the link
+          telLink.click();
 
-        // Remove the link from the document
-        document.body.removeChild(telLink);
-        // document.getElementById('callUsText').style.color = '#1e2d3b';
-      }
+          // Remove the link from the document
+          document.body.removeChild(telLink);
+          // document.getElementById('callUsText').style.color = '#1e2d3b';
+        }
 
-      function handleEmailUs() {
-        // Replace with your email address
-        const emailAddress = "enquiry@shunmugasteel.in";
+        function handleEmailUs() {
+          // Replace with your email address
+          const emailAddress = "enquiry@shunmugasteel.in";
 
-        // Construct the mailto URL
-        const mailtoUrl = "mailto:" + emailAddress;
+          // Construct the mailto URL
+          const mailtoUrl = "mailto:" + emailAddress;
 
-        // Open the default email client
-        window.location.href = mailtoUrl;
-      }
+          // Open the default email client
+          window.location.href = mailtoUrl;
+        }
+      </script>
+      <script src="./form-validate.js"></script>
 
-    </script>
-    <script src="./form-validate.js"></script>
-
-    <div class="header-contact">
-      <div class="header-phone">
-        <div class="header-contact-text">
-          <img src="./images/receiver.png" alt="" />
-          <span><a href="tel:7200240007">7200240007</a></span>
-        </div>
-        <div class="header-contact-text">
-          <img src="./images/receiver.png" alt="" />
-          <span><a href="tel:+91 44-29560207">+91 44-29560207</a></span>
-        </div>
-        <div class="header-contact-text">
-          <img src="./images/email.png" alt="" />
-          <span><a href="mailto:enquiry@shunmugasteel.in">enquiry@shunmugasteel.in</a></span>
-        </div>
-      </div>
-      <div class="social-media">
-        <a href="https://www.linkedin.com/in/shunmuga-steel-traders-0285a12a1/" target="_blank">
-          <img src="./images/linkedin.png" alt="" />
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61553792617450" target="_blank">
-          <img src="./images/fblogo.webp" alt="" />
-        </a>
-        <a href="https://www.youtube.com/@shunmugasteeltraders" target="_blank">
-          <img src="./images/youtube.png" alt="" />
-        </a>
-        <a href="https://www.instagram.com/shunmugasteeltraders" target="_blank">
-          <img src="./images/insta.png" alt="" />
-        </a>
-      </div>
-    </div>
-    <nav>
-      <div class="header-company-name">
-        <a href="/">
-          <img src="./images/logo.png" alt="vel-logo" />
-        </a>
-      </div>
-      <ul class="menu-items">
-        <li class="menu-items-list">
-          <a href="/" class="href">Home</a>
-        </li>
-        <li class="menu-items-list">
-          <a href="/about.html" class="href">About us</a>
-        </li>
-        <li class="menu-items-list product-item">
-          <a onClick="toggleMenuItems()">Product
-            <span id="caret-down" class="caret-down hide"></span>
-          </a>
-          <div id="product-menu" class="product-menu hide">
-            <div class="product-image-container" onclick="changeURL('./products/cold-rolled-steel.html')">
-              <a href="">Cold Rolled Steel</a>
-              <img src="./images/cold-rolled-steel.jpg" alt="" />
-            </div>
-            <div class="product-image-container" onclick="changeURL('./products/gp-sheet.html')">
-              <a href="">Galvanized Steel</a>
-              <img src="./images/products/GP-sheet.jpg" alt="" />
-            </div>
-            <div class="product-image-container" onclick="changeURL('./products/color-sheet.html')">
-              <a href="">Color coat Steel</a>
-              <img src="./images/coloursheet.png" alt="" />
-            </div>
-            <div class="product-image-container" onclick="changeURL('./products/roofing-accessories.html')">
-              <a href="">Roofing accessories</a>
-              <img src="./images/roofing-accessories.png" alt="" />
-            </div>
-            <div class="product-image-container" onclick="changeURL('./products/decking-sheet.html')">
-              <a href="">Decking Sheets</a>
-              <img src="./images/decking-sheets.jpeg" alt="" />
-            </div>
-            <div class="product-image-container" onclick="changeURL('./products/gc-sheet.html')">
-              <a href="">GC Sheets</a>
-              <img src="./images/products/GC-sheet.jpg" alt="" />
-            </div>
+      <div class="header-contact">
+        <div class="header-phone">
+          <div class="header-contact-text">
+            <img src="./images/receiver.png" alt="" />
+            <span><a href="tel:7200240007">7200240007</a></span>
           </div>
-        </li>
-        <li class="menu-items-list">
-          <a href="../contact-us.html" class="href">Contact us</a>
-        </li>
-      </ul>
-      <div class="mobile-menu">
-        <img src="./images/small-menu.png" alt="" onclick="toggleMenuListItems()" />
+          <div class="header-contact-text">
+            <img src="./images/receiver.png" alt="" />
+            <span><a href="tel:+91 44-29560207">+91 44-29560207</a></span>
+          </div>
+          <div class="header-contact-text">
+            <img src="./images/email.png" alt="" />
+            <span
+              ><a href="mailto:enquiry@shunmugasteel.in"
+                >enquiry@shunmugasteel.in</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="social-media">
+          <a
+            href="https://www.linkedin.com/in/shunmuga-steel-traders-0285a12a1/"
+            target="_blank"
+          >
+            <img src="./images/linkedin.png" alt="" />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61553792617450"
+            target="_blank"
+          >
+            <img src="./images/fblogo.webp" alt="" />
+          </a>
+          <a
+            href="https://www.youtube.com/@shunmugasteeltraders"
+            target="_blank"
+          >
+            <img src="./images/youtube.png" alt="" />
+          </a>
+          <a
+            href="https://www.instagram.com/shunmugasteeltraders"
+            target="_blank"
+          >
+            <img src="./images/insta.png" alt="" />
+          </a>
+        </div>
       </div>
-    </nav>
-    <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
-      <ul>
-        <li onclick="changeURL('./products/cold-rolled-steel.html')">
-          <span>Cold Rolled Steel</span>
-        </li>
-        <li onclick="changeURL('./products/gp-sheet.html')">
-          <span> Galvanized Steel</span>
-        </li>
-        <li onclick=" changeURL('./products/color-sheet.html')">
-          <span>Color coat Steel</span>
-        </li>
-        <li onclick=" changeURL('./products/roofing-accessories.html')">
-          <span>Roofing accessories</span>
-        </li>
-        <li onclick=" changeURL('./products/decking-sheet.html')">
-          <span>Decking Sheets</span>
-        </li>
-        <li onclick=" changeURL('./products/gc-sheet.html')">
-          <span>GC Sheets</span>
-        </li>
-        <li onclick=" changeURL('./about.html')"><span> About us</span></li>
-        <li onclick=" changeURL('./contact-us.html')">
-          <span>Contact us</span>
-        </li>
-      </ul>
-    </div>
+      <nav>
+        <div class="header-company-name">
+          <a href="/">
+            <img src="./images/logo.png" alt="vel-logo" />
+          </a>
+        </div>
+        <ul class="menu-items">
+          <li class="menu-items-list">
+            <a href="/" class="href">Home</a>
+          </li>
+          <li class="menu-items-list">
+            <a href="/about.html" class="href">About us</a>
+          </li>
+          <li class="menu-items-list product-item">
+            <a onClick="toggleMenuItems()"
+              >Product
+              <span id="caret-down" class="caret-down hide"></span>
+            </a>
+            <div id="product-menu" class="product-menu hide">
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/cold-rolled-steel.html')"
+              >
+                <a href="">Cold Rolled Steel</a>
+                <img src="./images/cold-rolled-steel.jpg" alt="" />
+              </div>
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/gp-sheet.html')"
+              >
+                <a href="">Galvanized Steel</a>
+                <img src="./images/products/GP-sheet.jpg" alt="" />
+              </div>
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/color-sheet.html')"
+              >
+                <a href="">Color coat Steel</a>
+                <img src="./images/coloursheet.png" alt="" />
+              </div>
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/roofing-accessories.html')"
+              >
+                <a href="">Roofing accessories</a>
+                <img src="./images/roofing-accessories.png" alt="" />
+              </div>
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/decking-sheet.html')"
+              >
+                <a href="">Decking Sheets</a>
+                <img src="./images/decking-sheets.jpeg" alt="" />
+              </div>
+              <div
+                class="product-image-container"
+                onclick="changeURL('./products/gc-sheet.html')"
+              >
+                <a href="">GC Sheets</a>
+                <img src="./images/products/GC-sheet.jpg" alt="" />
+              </div>
+            </div>
+          </li>
+          <li class="menu-items-list">
+            <a href="../contact-us.html" class="href">Contact us</a>
+          </li>
+        </ul>
+        <div class="mobile-menu">
+          <img
+            src="./images/small-menu.png"
+            alt=""
+            onclick="toggleMenuListItems()"
+          />
+        </div>
+      </nav>
+      <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
+        <ul>
+          <li onclick="changeURL('./products/cold-rolled-steel.html')">
+            <span>Cold Rolled Steel</span>
+          </li>
+          <li onclick="changeURL('./products/gp-sheet.html')">
+            <span> Galvanized Steel</span>
+          </li>
+          <li onclick=" changeURL('./products/color-sheet.html')">
+            <span>Color coat Steel</span>
+          </li>
+          <li onclick=" changeURL('./products/roofing-accessories.html')">
+            <span>Roofing accessories</span>
+          </li>
+          <li onclick=" changeURL('./products/decking-sheet.html')">
+            <span>Decking Sheets</span>
+          </li>
+          <li onclick=" changeURL('./products/gc-sheet.html')">
+            <span>GC Sheets</span>
+          </li>
+          <li onclick=" changeURL('./about.html')"><span> About us</span></li>
+          <li onclick=" changeURL('./contact-us.html')">
+            <span>Contact us</span>
+          </li>
+        </ul>
+      </div>
 
-    <div class="whatsapp-icon">
-      <a href="https://wa.me/+917200240007/" target="_blank"><img src="images/whatsapp.gif" width="55px" /></a>
-    </div>
-  </header>
-  <main>
-    <section class="carousel-section">
-      <div class="content">
-        <h1 class="slide-left">One Stop<br />Steel Buy</h1>
-        <p class="header1 slide-left">One Stop<br />Steel Buy</p>
-        <p class="slide-left">Destination for all your steel needs.</p>
+      <div class="whatsapp-icon">
+        <a href="https://wa.me/+917200240007/" target="_blank"
+          ><img src="images/whatsapp.gif" width="55px"
+        /></a>
       </div>
-    </section>
-    <div class="contact-group">
-      <button id="callUs" onclick="handleCallUs()">Call Us</button>
-      <button id="emailUs" onclick="handleEmailUs()">Email</button>
-    </div>
-    <section class="product-section">
-      <h3 id="product-section">Products</h3>
-      <!-- <h4 class="product-subtext">
+    </header>
+    <main>
+      <section class="carousel-section">
+        <div class="content">
+          <h1 class="slide-left">One Stop<br />Steel Buy</h1>
+          <p class="header1 slide-left">One Stop<br />Steel Buy</p>
+          <p class="slide-left">Destination for all your steel needs.</p>
+        </div>
+      </section>
+      <div class="contact-group">
+        <button id="callUs" onclick="handleCallUs()">Call Us</button>
+        <button id="emailUs" onclick="handleEmailUs()">Email</button>
+      </div>
+      <section class="product-section">
+        <h3 id="product-section">Products</h3>
+        <!-- <h4 class="product-subtext">
         Extensive Range of Steel Products / Brands / Services Under One Roof
       </h4> -->
-      <div class="product-container">
-        <div class="product-details" onclick="changeURL('./products/cold-rolled-steel.html')">
-          <img src="./images/cold-rolled-steel.jpg" alt="" />
-          <article class="product-card">
-            <h4 class="product-title">Cold Rolled Steel</h4>
-          </article>
-        </div>
-        <!-- jswsheet.jpg -->
-        <div class="product-details" onclick="changeURL('./products/gp-sheet.html')">
-          <img src=" ./images/products/GP-sheet.jpg" alt="" />
-          <article class="product-card">
-            <h4 class="product-title">Galvanized Steel</h4>
-          </article>
-        </div>
-        <div class="product-details">
-          <img src="./images/coloursheet.png" alt="" onclick="changeURL('./products/color-sheet.html')" />
-          <article class="product-card">
-            <h4 class="product-title">Color Coat Steel</h4>
-          </article>
-        </div>
-        <div class="product-details" onclick="changeURL('./products/roofing-accessories.html')">
-          <img src="./images/roofing-accessories.png" alt="" />
-          <article class="product-card">
-            <h4 class="product-title">Roofing Accessories</h4>
-          </article>
-        </div>
-        <div class="product-details">
-          <img src="./images/decking-sheets.jpeg" alt="" onclick="changeURL('./products/decking-sheet.html')" />
-          <article class="product-card">
-            <h4 class="product-title">Decking Sheets</h4>
-          </article>
-        </div>
-        <div class="product-details">
-          <img src="./images/products/GC-sheet.jpg" alt="" onclick="changeURL('./products/gc-sheet.html')" />
-          <article class="product-card">
-            <h4 class="product-title">GC Sheets</h4>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="home-contact-section">
-      <h3>Contact us</h3>
-      <div class="home-contact">
-        <img src="./images/contactus.jpg" alt="" />
-        <div class="contact-form-container">
-          <h4 class="contact-header">
-            We would be delighted to hear from you
-          </h4>
-          <form id="emailForm" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="fromName" name="fromName" required />
-            <span id="name-required" style="color: red; display: none">
-              Name is Required</span>
-            <br />
-
-            <label for="emailID">Email ID:</label>
-            <input type="email" id="emailID" name="emailID" required />
-            <span id="email-required" style="color: red; display: none">
-              Email is Required</span>
-            <span id="email-valid" style="color: red; display: none">
-              Email is not valid</span><br />
-
-            <label for="phoneNo">Phone Number:</label>
-            <input type="tel" id="phoneNo" name="phoneNo" required />
-            <span id="number-required" style="color: red; display: none">
-              Phone Number is Required</span>
-            <span id="number-valid" style="color: red; display: none">
-              Phone Number is not valid</span><br />
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <span id="message-required" style="color: red; display: none">
-              Message is Required</span>
-            <span style="color: green; display: none" id="send-success">
-              Thank you for your message.</span>
-            <span style="color: red; display: none" id="send-failed">
-              Error occured kindly retry.</span>
-            <br />
-            <button onclick="validateForm(event)">Send Email</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="address-section">
-      <h3>Address</h3>
-      <div class="address-container">
-        <div class="address-details-container">
-          <h4>Head office</h4>
-          <div class="address-details">
-            <img src="./images/location.png" alt="" />
-            <div>
-              <p>No.3/100, Rasappa street,</p>
-              <p>1st Floor, Park town,</p>
-              <p>Chennai- 600003</p>
-            </div>
+        <div class="product-container">
+          <div
+            class="product-details"
+            onclick="changeURL('./products/cold-rolled-steel.html')"
+          >
+            <img src="./images/cold-rolled-steel.jpg" alt="" />
+            <article class="product-card">
+              <h4 class="product-title">Cold Rolled Steel</h4>
+            </article>
+          </div>
+          <!-- jswsheet.jpg -->
+          <div
+            class="product-details"
+            onclick="changeURL('./products/gp-sheet.html')"
+          >
+            <img src=" ./images/products/GP-sheet.jpg" alt="" />
+            <article class="product-card">
+              <h4 class="product-title">Galvanized Steel</h4>
+            </article>
+          </div>
+          <div class="product-details">
+            <img
+              src="./images/coloursheet.png"
+              alt=""
+              onclick="changeURL('./products/color-sheet.html')"
+            />
+            <article class="product-card">
+              <h4 class="product-title">Color Coat Steel</h4>
+            </article>
+          </div>
+          <div
+            class="product-details"
+            onclick="changeURL('./products/roofing-accessories.html')"
+          >
+            <img src="./images/roofing-accessories.png" alt="" />
+            <article class="product-card">
+              <h4 class="product-title">Roofing Accessories</h4>
+            </article>
+          </div>
+          <div class="product-details">
+            <img
+              src="./images/decking-sheets.jpeg"
+              alt=""
+              onclick="changeURL('./products/decking-sheet.html')"
+            />
+            <article class="product-card">
+              <h4 class="product-title">Decking Sheets</h4>
+            </article>
+          </div>
+          <div class="product-details">
+            <img
+              src="./images/products/GC-sheet.jpg"
+              alt=""
+              onclick="changeURL('./products/gc-sheet.html')"
+            />
+            <article class="product-card">
+              <h4 class="product-title">GC Sheets</h4>
+            </article>
           </div>
         </div>
-        <div class="address-details-container">
-          <h4>Manali Godown</h4>
-          <div class="address-details">
-            <img src="./images/location.png" alt="" />
-            <div>
-              <p>C-141, Sathangadu iron and steel market,</p>
-              <p>Through : Gate No 2,</p>
-              <p>Chennai- 600068</p>
-            </div>
+      </section>
+      <section class="gallery-section">
+        <h3 id="gallery-section">Gallery</h3>
+        <div class="gallery-container">
+          <img
+            src="./images/gallery/gallery-1.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-2.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-3.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-4.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-5.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-6.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-7.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-8.jpg"
+            alt=""
+            class="gallery-img"
+          />
+          <img
+            src="./images/gallery/gallery-9.jpg"
+            alt=""
+            class="gallery-img"
+          />
+        </div>
+      </section>
+      <section class="home-contact-section">
+        <h3>Contact us</h3>
+        <div class="home-contact">
+          <img src="./images/contactus.jpg" alt="" />
+          <div class="contact-form-container">
+            <h4 class="contact-header">
+              We would be delighted to hear from you
+            </h4>
+            <form id="emailForm" class="contact-form">
+              <label for="name">Name:</label>
+              <input type="text" id="fromName" name="fromName" required />
+              <span id="name-required" style="color: red; display: none">
+                Name is Required</span
+              >
+              <br />
+
+              <label for="emailID">Email ID:</label>
+              <input type="email" id="emailID" name="emailID" required />
+              <span id="email-required" style="color: red; display: none">
+                Email is Required</span
+              >
+              <span id="email-valid" style="color: red; display: none">
+                Email is not valid</span
+              ><br />
+
+              <label for="phoneNo">Phone Number:</label>
+              <input type="tel" id="phoneNo" name="phoneNo" required />
+              <span id="number-required" style="color: red; display: none">
+                Phone Number is Required</span
+              >
+              <span id="number-valid" style="color: red; display: none">
+                Phone Number is not valid</span
+              ><br />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <span id="message-required" style="color: red; display: none">
+                Message is Required</span
+              >
+              <span style="color: green; display: none" id="send-success">
+                Thank you for your message.</span
+              >
+              <span style="color: red; display: none" id="send-failed">
+                Error occured kindly retry.</span
+              >
+              <br />
+              <button onclick="validateForm(event)">Send Email</button>
+            </form>
           </div>
         </div>
-        <div class="address-details-container">
-          <h4>Erode office</h4>
-          <div class="address-details">
-            <img src="./images/location.png" alt="" />
-            <div>
-              <p>No.165, Sakthi Nagar,</p>
-              <p>Nalliyampalayam, Thindal,</p>
-              <p>Tamil Nadu 638012</p>
+      </section>
+      <section class="address-section">
+        <h3>Address</h3>
+        <div class="address-container">
+          <div class="address-details-container">
+            <h4>Head office</h4>
+            <div class="address-details">
+              <img src="./images/location.png" alt="" />
+              <div>
+                <p>No.3/100, Rasappa street,</p>
+                <p>1st Floor, Park town,</p>
+                <p>Chennai- 600003</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="address-details-container">
-          <h4>Trichy office</h4>
-          <div class="address-details">
-            <img src="./images/location.png" alt="" />
-            <div>
-              <p>No.29/D, Mannachanullar Road,</p>
-              <p>Samaypuram,</p>
-              <p>Tiruchirapalli- 621112</p>
+          <div class="address-details-container">
+            <h4>Manali Godown</h4>
+            <div class="address-details">
+              <img src="./images/location.png" alt="" />
+              <div>
+                <p>C-141, Sathangadu iron and steel market,</p>
+                <p>Through : Gate No 2,</p>
+                <p>Chennai- 600068</p>
+              </div>
             </div>
           </div>
+          <div class="address-details-container">
+            <h4>Erode office</h4>
+            <div class="address-details">
+              <img src="./images/location.png" alt="" />
+              <div>
+                <p>No.165, Sakthi Nagar,</p>
+                <p>Nalliyampalayam, Thindal,</p>
+                <p>Tamil Nadu 638012</p>
+              </div>
+            </div>
+          </div>
+          <div class="address-details-container">
+            <h4>Trichy office</h4>
+            <div class="address-details">
+              <img src="./images/location.png" alt="" />
+              <div>
+                <p>No.29/D, Mannachanullar Road,</p>
+                <p>Samaypuram,</p>
+                <p>Tiruchirapalli- 621112</p>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px">
+            <h4>Contact:</h4>
+            <h4>+91 7200240007</h4>
+          </div>
         </div>
-        <div style="display: flex; gap: 10px">
-          <h4>Contact:</h4>
-          <h4>+91 7200240007</h4>
-        </div>
-      </div>
-    </section>
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <form id="emailForm" class="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="fromName" name="fromName" required />
-          <span id="name-required" style="color: red; display: none">
-            Name is Required</span>
-          <br />
-
-          <label for="emailID">Email ID:</label>
-          <input type="email" id="emailID" name="emailID" required />
-          <span id="email-required" style="color: red; display: none">
-            Email is Required</span>
-          <span id="email-valid" style="color: red; display: none">
-            Email is not valid</span><br />
-
-          <label for="phoneNo">Phone Number:</label>
-          <input type="tel" id="phoneNo" name="phoneNo" required />
-          <span id="number-required" style="color: red; display: none">
-            Phone Number is Required</span>
-          <span id="number-valid" style="color: red; display: none">
-            Phone Number is not valid</span><br />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <span id="message-required" style="color: red; display: none">
-            Message is Required</span>
-          <span style="color: green; display: none" id="send-success">
-            Thank you for your message.</span>
-          <span style="color: red; display: none" id="send-failed">
-            Error occured kindly retry.</span>
-          <br />
-          <button onclick="validateForm(event)">Send Email</button>
-        </form>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
-  </footer>
-</body>
-
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
+    </footer>
+  </body>
 </html>

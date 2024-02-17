@@ -671,6 +671,36 @@ body {
         height: 20px;
       }
     }
+
+    .gallery-section {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      .gallery-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 80px;
+
+        .gallery-img {
+          border: 1px solid gainsboro;
+          border-radius: 20px;
+          width: 250px;
+          height: 250px;
+          transition: transform 0.3s ease-in-out;
+          cursor: pointer;
+        }
+
+        .gallery-img:hover {
+          transform: scale(1.4);
+        }
+      }
+    }
   }
 
   .about-section {
@@ -987,6 +1017,14 @@ body {
 
         .product-container {
           grid-template-columns: 1fr;
+        }
+      }
+
+      .gallery-section {
+        .gallery-container {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          gap: 50px
         }
       }
 
