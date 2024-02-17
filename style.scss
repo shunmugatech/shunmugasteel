@@ -403,7 +403,7 @@ body {
 
             input,
             textarea {
-              padding: 5px;
+              padding: 8px;
               border-radius: 5px;
               border: 1px solid darkgray;
             }
@@ -1083,27 +1083,6 @@ body {
         /* Black w/ opacity */
       }
 
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: #fefefe;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-
-        .contact-form {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-
-          input,
-          textarea {
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid darkgray;
-          }
-        }
-
-      }
 
       /* The Close Button */
       .close {

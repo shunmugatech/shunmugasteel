@@ -333,7 +333,7 @@ body main .home-contact-section .home-contact .contact-form-container form {
 }
 body main .home-contact-section .home-contact .contact-form-container form input,
 body main .home-contact-section .home-contact .contact-form-container form textarea {
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
   border: 1px solid darkgray;
 }
@@ -775,7 +775,6 @@ body footer {
   }
   body main {
     /* The Modal (background) */
-    /* Modal Content/Box */
     /* The Close Button */
   }
   body main .contact-group {
@@ -858,23 +857,6 @@ body footer {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
-  }
-  body main .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  body main .modal-content .contact-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  body main .modal-content .contact-form input,
-  body main .modal-content .contact-form textarea {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid darkgray;
   }
   body main .close {
     color: #aaa;
