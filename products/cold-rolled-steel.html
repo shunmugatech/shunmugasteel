@@ -9,207 +9,191 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
 </head>
 
 <body>
-    <header>
-        <script>
-            function toggleMenuItems() {
-                const produtMenu = document.getElementById("product-menu");
-                if (produtMenu.className.includes("hide")) {
-                    produtMenu.className = "product-menu";
-                    document.getElementById("caret-down").className = "caret-down";
-                } else {
-                    produtMenu.className = "product-menu hide";
-                    document.getElementById("caret-down").className = "hide";
-                }
-            }
-
-            function toggleMenuListItems() {
-                const mobileMenu = document.getElementById("mobile-menu-items");
-                if (mobileMenu.className.includes("hide")) {
-                    mobileMenu.className = "mobile-menu-items";
-                } else {
-                    mobileMenu.className = "mobile-menu-items hide";
-                }
-            }
-
-            function changeURL(url) {
-                window.location.href = `${url}`;
-            }
-
-            window.addEventListener("click", function (e) { });
-        </script>
-        <div class="header-contact">
-
-            <div class="header-phone">
-                <div class="header-contact-text">
-                    <img src="../images/receiver.png" alt="" />
-                    <span><a href="tel:7200240007">7200240007</a></span>
-                </div>
-                <div class="header-contact-text">
-                    <img src="../images/receiver.png" alt="" />
-                    <span><a href="tel:+91 44-29560207">+91 44-29560207</a></span>
-                </div>
-                <div class="header-contact-text">
-                    <img src="../images/email.png" alt="" />
-                    <span><a href="mailto:enquiry@shunmugasteel.in">enquiry@shunmugasteel.in</a></span>
-                </div>
-            </div>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/shunmuga-steel-traders-0285a12a1/" target="_blank">
-                    <img src="../images/linkedin.png" alt="" />
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61553792617450" target="_blank">
-                    <img src="../images/fblogo.webp" alt="" />
-                </a>
-                <a href="https://www.youtube.com/@shunmugasteeltraders" target="_blank">
-                    <img src="../images/youtube.png" alt="" />
-                </a>
-                <a href="https://www.instagram.com/shunmugasteeltraders" target="_blank">
-                    <img src="../images/insta.png" alt="" />
+    <main class="product-page">
+        <nav id="navbar">
+            <div class="header-logo">
+                <a href="">
+                    Shanuma Steels Traders
                 </a>
             </div>
-        </div>
-        <nav>
-            <div class="header-company-name">
-                <a href="/">
-                    <img src="../images/logo.png" alt="vel-logo" />
-                </a>
-            </div>
-            <ul class="menu-items">
-                <li class="menu-items-list">
-                    <a href="/" class="href">Home</a>
-                </li>
-                <li class="menu-items-list">
-                    <a href="/about.html" class="href">About us</a>
-                </li>
-                <li class="menu-items-list product-item">
-                    <a onClick="toggleMenuItems()">Product
-                        <span id="caret-down" class="caret-down hide"></span>
-                    </a>
-                    <div id="product-menu" class="product-menu hide">
-                        <div class="product-image-container" onclick="changeURL('./cold-rolled-steel.html')">
-                            <a href="">Cold Rolled Steel</a>
-                            <img src="../images/cold-rolled-steel.jpg" alt="" />
-                        </div>
-                        <div class="product-image-container" onclick="changeURL('./gp-sheet.html')">
-                            <a href="">Galvanized Steel</a>
-                            <img src="../images/products/GP-sheet.jpg" alt="" />
-                        </div>
-                        <div class="product-image-container" onclick="changeURL('./color-sheet.html')">
-                            <a href="">Color coat Steel</a>
-                            <img src="../images/coloursheet.png" alt="" />
-                        </div>
-                        <div class="product-image-container" onclick="changeURL('./roofing-accessories.html')">
-                            <a href="">Roofing accessories</a>
-                            <img src="../images/roofing-accessories.png" alt="" />
-                        </div>
-                        <div class="product-image-container" onclick="changeURL('./decking-sheet.html')">
-                            <a href="">Decking Sheets</a>
-                            <img src="../images/decking-sheets.jpeg" alt="" />
-                        </div>
-                        <div class="product-image-container" onclick="changeURL('./gc-sheet.html')">
-                            <a href="">GC Sheets</a>
-                            <img src="../images/products/GC-sheet.jpg" alt="" />
-                        </div>
-                    </div>
-                </li>
-                <li class="menu-items-list">
-                    <a href="../contact-us.html" class="href">Contact us</a>
-                </li>
+
+            <ul class="header-nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">About us </a></li>
+                <li><a href="">Product </a></li>
+                <li><a href="">Contact Us</a></li>
             </ul>
-            <div class="mobile-menu">
-                <img src="../images/small-menu.png" alt="" onclick="toggleMenuListItems()" />
-            </div>
+
+            <button class="header-button">
+                GET A FREE QUOTE
+            </button>
         </nav>
-        <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
-            <ul>
-                <li onclick="changeURL('./cold-rolled-steel.html')">
-                    <span>Cold Rolled Steel</span>
-                </li>
-                <li onclick="changeURL('./gp-sheet.html')">
-                    <span> Galvanized Steel</span>
-                </li>
-                <li onclick=" changeURL('./color-sheet.html')">
-                    <span>Color coat Steel</span>
-                </li>
-                <li onclick=" changeURL('./roofing-accessories.html')">
-                    <span>Roofing accessories</span>
-                </li>
-                <li onclick=" changeURL('./decking-sheet.html')">
-                    <span>Decking Sheets</span>
-                </li>
-                <li onclick=" changeURL('./gc-sheet.html')">
-                    <span>GC Sheets</span>
-                </li>
-                <li onclick=" changeURL('/about.html')"><span> About us</span></li>
-                <li onclick=" changeURL('/contact-us.html')">
-                    <span>Contact us</span>
-                </li>
-            </ul>
-        </div>
-        <div class="whatsapp-icon">
-            <a href="https://wa.me/+917200240007/" target="_blank"><img src="../images/whatsapp.gif" width="55px" /></a>
-        </div>
-    </header>
-    <main>
-        <div class="product-page">
-            <div class="product-image-banner">
-                <h1>Cold Rolled Steel Suppliers</h1>
-            </div>
-            <div class="product-container">
-                <div class="product-image">
-                    <img src="../images/cold-rolled-steel.jpg" alt="" />
+        <section class="section-carousel">
+            <div class="content">
+                <h1 class="slide-left">Cold Rolled<br />Steel</h1>
+                <p class="slide-left">
+                    Here is one stop Purchase for all your needs related to
+                    constructions
+                </p>
+                <div class="links slide-left">
+                    <a href="#" class="btn">Learn More</a>
+                    <a href="#" class="btn">or Contact</a>
                 </div>
+            </div>
+            <div class="carousel-has-slant"></div>
+        </section>
+        <section class="product-section">
+            <div class="product-container">
+                <img src="../images/cold-rolled-steel.jpg" alt="">
                 <div class="product-description">
-                    <h3>Cold Rolled Steel </h3>
-                    <br />
-                    <div class="description-section">
-                        <h4>
-                            Cold Rolled Steel
-                        </h4>
-                        <p>Cold rolled steel is a type of steel that has been rolled at room temperature. This process
-                            reduces the grain size of the steel, making it stronger and more ductile.</p>
-                        <p> Cold rolled steel
-                            also has a smoother surface finish than hot rolled steel.</p>
-                    </div>
-                    <div class="description-section">
-                        <h4>Benefits of Cold Rolled Steel</h4>
-                        <ul>
-                            <li>Strength</li>
-                            <li>Ductility</li>
-                            <li>Smooth surface finish</li>
-                            <li>Corrosion resistance</li>
-                        </ul>
-                    </div>
-                    <div class="description-section">
-                        <h4>
-                            Cold Rolled Steel available in Variety of Sizes,
-                            thickness and Shapes:
-                        </h4>
-                        <p>
-                        <ul>
-                            <li>Thickness: 0.40 to 2.00mm </li>
-                            <li>Width: 910, 1000, 1250, 1500</li>
-                            <li>Standard Lenght: 1830, 2500 </li>
-                            <li>Customized Length: Accourding to your industrail Requirement We can provide cut to
-                                length size</li>
-                            <li>Brands we deal in: Sail </li>
-                        </ul>
+                    <h2>Cold Rolled Steel</h2>
+                    <div class="product-text-description">
+                        <p>Cold-rolled steel has emerged as a game-changer, combining
+                            strength, precision, and a smooth surface finish to meet the needs of a wide range of
+                            industries.
+                        </p>
+                        <p>At Shanumga Steel, we specialize in providing premium cold-rolled steel
+                            solutions tailored to your specific requirements.
                         </p>
                     </div>
+                    <h3>Product Details:</h3>
+                    <div class="table-container">
+                        <table class="specifications-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Thickness:</td>
+                                <td>0.3-3MM</td>
+                            </tr>
+                            <tr>
+                                <td>Width:</td>
+                                <td>910, 1000, 1250, 1500</td>
+                            </tr>
+                            <tr>
+                                <td>Standard Lenght: </td>
+                                <td>1830, 2500</td>
+                            </tr>
+                            <tr>
+                                <td>Customized Length: </td>
+                                <td>Accourding to your industrail Requirement We can provide cut to length size</td>
+                            </tr>
+                            <tr>
+                                <td>Brands we deal in:</td>
+                                <td>Sail</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="product-button">
+                        <button class="product-action-button"> Get Best Quote </button>
+                        <button class="product-action-button"> Request A Callback </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-contact ">
+
+            <div class="contact-text-container">
+                <div>
+                    <h3>Get a Free Quote</h3>
+                    <p>Please fill out your contact info and we’ll get back to you as soon as we can.</p>
+                </div>
+                <div>
+                    <h3>Or contact us directly</h3>
+                    <p>
+                        <b>01642 804534</b>
+                    </p>
+                    <p>
+                        <b>studio@viacreative.co.uk </b>
                 </div>
             </div>
-        </div>
-        <div class="contact-group">
-            <button><a href="tel:7200240007">Call Us</a></button>
-            <button><a href="mailto:enquiry@shunmugasteel.in">Email</a></button>
-        </div>
+            <div class="contact-form-container">
+                <select name="" id="" class="form-input">
+                    <option value selected disabled>Please choose the product</option>
+                    <option value="cold-rolled-steel">Cold rolled steel</option>
+                    <option value="color-sheet">Color Sheet</option>
+                    <option value="decking-sheet">Decking Sheet</option>
+                    <option value="gc-sheet">GC Sheet</option>
+                    <option value="roofing-accessories">Roofing Accessories</option>
+                </select>
+                <input type="text" placeholder="Name" class="form-input">
+                <input type="text" placeholder="Phone" class="form-input">
+                <input type="text" placeholder="Email" class="form-input">
+                <textarea name="" id="" rows="5" placeholder="Your Enquiry"
+                    class="form-input contact-textarea"></textarea>
+                <button class="contact-send-button"> SEND </button>
+            </div>
+        </section>
+        <section class="section-footer">
+            <div class="contact-info">
+                <h3 class="green-text">Contact Info</h3>
+                <div class="tele-number">
+                    <h3>Telephone</h3>
+                    <b>+91 7200240007</b>
+                </div>
+            </div>
+            <div class="region-office">
+                <h3>Head Office</h3>
+                <div class="office-address">
+                    <p>No.3/100,</p>
+                    <p> Rasappa street,</p>
+                    <p>1st Floor, Park town,</p>
+                    <p>Chennai- 600003</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Manali Godown</h3>
+                <div class="office-address">
+                    <p>C-141, Sathangadu</p>
+                    <p>iron and steel market,</p>
+                    <p>Through : Gate No 2,</p>
+                    <p>Chennai- 600068</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Erode office</h3>
+                <div class="office-address">
+                    <p>No.165, </p>
+                    <p>Sakthi Nagar,</p>
+                    <p>Nalliyampalayam, Thindal,</p>
+                    <p>Tamil Nadu 638012</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Trichy office</h3>
+                <div class="office-address">
+                    <p>No.29/D,</p>
+                    <p>Mannachanullar Road,</p>
+                    <p>Samaypuram,</p>
+                    <p>Tiruchirapalli- 621112</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+        </section>
     </main>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (navbar) {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+
+        })
+    </script>
 </body>
-<footer>
-    <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
-</footer>
 
 </html>

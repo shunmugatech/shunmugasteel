@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <script>
+            function toggleMenuItems() {
+                const produtMenu = document.getElementById("product-menu");
+                if (produtMenu.className.includes("hide")) {
+                    produtMenu.className = "product-menu";
+                    document.getElementById("caret-down").className = "caret-down";
+                } else {
+                    produtMenu.className = "product-menu hide";
+                    document.getElementById("caret-down").className = "hide";
+                }
+            }
+
+            function toggleMenuListItems() {
+                const mobileMenu = document.getElementById("mobile-menu-items");
+                if (mobileMenu.className.includes("hide")) {
+                    mobileMenu.className = "mobile-menu-items";
+                } else {
+                    mobileMenu.className = "mobile-menu-items hide";
+                }
+            }
+
+            function changeURL(url) {
+                window.location.href = `${url}`;
+            }
+
+            window.addEventListener("click", function (e) { });
+        </script>
+        <div class="header-contact">
+
+            <div class="header-phone">
+                <div class="header-contact-text">
+                    <img src="../images/receiver.png" alt="" />
+                    <span><a href="tel:7200240007">7200240007</a></span>
+                </div>
+                <div class="header-contact-text">
+                    <img src="../images/receiver.png" alt="" />
+                    <span><a href="tel:+91 44-29560207">+91 44-29560207</a></span>
+                </div>
+                <div class="header-contact-text">
+                    <img src="../images/email.png" alt="" />
+                    <span><a href="mailto:enquiry@shunmugasteel.in">enquiry@shunmugasteel.in</a></span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/shunmuga-steel-traders-0285a12a1/" target="_blank">
+                    <img src="../images/linkedin.png" alt="" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61553792617450" target="_blank">
+                    <img src="../images/fblogo.webp" alt="" />
+                </a>
+                <a href="https://www.youtube.com/@shunmugasteeltraders" target="_blank">
+                    <img src="../images/youtube.png" alt="" />
+                </a>
+                <a href="https://www.instagram.com/shunmugasteeltraders" target="_blank">
+                    <img src="../images/insta.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <nav>
+            <div class="header-company-name">
+                <a href="/">
+                    <img src="../images/logo.png" alt="vel-logo" />
+                </a>
+            </div>
+            <ul class="menu-items">
+                <li class="menu-items-list">
+                    <a href="/" class="href">Home</a>
+                </li>
+                <li class="menu-items-list">
+                    <a href="/about.html" class="href">About us</a>
+                </li>
+                <li class="menu-items-list product-item">
+                    <a onClick="toggleMenuItems()">Product
+                        <span id="caret-down" class="caret-down hide"></span>
+                    </a>
+                    <div id="product-menu" class="product-menu hide">
+                        <div class="product-image-container" onclick="changeURL('./cold-rolled-steel.html')">
+                            <a href="">Cold Rolled Steel</a>
+                            <img src="../images/cold-rolled-steel.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./gp-sheet.html')">
+                            <a href="">Galvanized Steel</a>
+                            <img src="../images/products/GP-sheet.jpg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./color-sheet.html')">
+                            <a href="">Color coat Steel</a>
+                            <img src="../images/coloursheet.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./roofing-accessories.html')">
+                            <a href="">Roofing accessories</a>
+                            <img src="../images/roofing-accessories.png" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./decking-sheet.html')">
+                            <a href="">Decking Sheets</a>
+                            <img src="../images/decking-sheets.jpeg" alt="" />
+                        </div>
+                        <div class="product-image-container" onclick="changeURL('./gc-sheet.html')">
+                            <a href="">GC Sheets</a>
+                            <img src="../images/products/GC-sheet.jpg" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-items-list">
+                    <a href="../contact-us.html" class="href">Contact us</a>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <img src="../images/small-menu.png" alt="" onclick="toggleMenuListItems()" />
+            </div>
+        </nav>
+        <div class="mobile-menu mobile-menu-items hide" id="mobile-menu-items">
+            <ul>
+                <li onclick="changeURL('./cold-rolled-steel.html')">
+                    <span>Cold Rolled Steel</span>
+                </li>
+                <li onclick="changeURL('./gp-sheet.html')">
+                    <span> Galvanized Steel</span>
+                </li>
+                <li onclick=" changeURL('./color-sheet.html')">
+                    <span>Color coat Steel</span>
+                </li>
+                <li onclick=" changeURL('./roofing-accessories.html')">
+                    <span>Roofing accessories</span>
+                </li>
+                <li onclick=" changeURL('./decking-sheet.html')">
+                    <span>Decking Sheets</span>
+                </li>
+                <li onclick=" changeURL('./gc-sheet.html')">
+                    <span>GC Sheets</span>
+                </li>
+                <li onclick=" changeURL('/about.html')"><span> About us</span></li>
+                <li onclick=" changeURL('/contact-us.html')">
+                    <span>Contact us</span>
+                </li>
+            </ul>
+        </div>
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/+917200240007/" target="_blank"><img src="../images/whatsapp.gif" width="55px" /></a>
+        </div>
+    </header>
+    <main>
+        <div class="product-page">
+            <div class="product-image-banner">
+                <h1>Cold Rolled Steel Suppliers</h1>
+            </div>
+            <section>
+                <div>Cold Rolled Steel Suppliers</div>
+                <div>
+                    <p>Cold rolled steel is a type of steel that has been rolled at room temperature.</p>
+
+                    <p>This process reduces the grain size of the steel, making it stronger and more ductile.</p>
+
+                    <p> Cold rolled steel also has a smoother surface finish than hot rolled steel.</p>
+                </div>
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+        </div>
+        <div class="contact-group">
+            <button><a href="tel:7200240007">Call Us</a></button>
+            <button><a href="mailto:enquiry@shunmugasteel.in">Email</a></button>
+        </div>
+    </main>
+</body>
+<footer>
+    <p>© 2023 Shunmuga Steel Traders. All rights reserved</p>
+</footer>
+
+</html>
