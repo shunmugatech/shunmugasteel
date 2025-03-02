@@ -9,28 +9,37 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-
 </head>
 
 <body>
   <main>
     <nav id="navbar">
       <div class="header-logo">
-        <a href="">
-          Shanuma Steels Traders
-        </a>
+        <a href=""> Shanuma Steels Traders </a>
       </div>
 
       <ul class="header-nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">About us </a></li>
-        <li><a href="">Product </a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="./about.html">About us </a></li>
+        <li class="products-list">
+          <a href="./products/cold-rolled-steel.html">Product </a>
+
+          <ul class="product-menu-list">
+            <li><a href="./products/cold-rolled-steel.html"> Cold Rolled Sheet</a></li>
+            <li><a href=""> Decking Sheet</a></li>
+            <li><a href=""> Color Sheet</a></li>
+            <li><a href=""> GP sheet</a></li>
+            <li><a href=""> Roofing Accessories</a></li>
+            <li><a href=""> GC Sheet</a></li>
+          </ul>
+
+
+        </li>
+
         <li><a href="">Contact Us</a></li>
       </ul>
 
-      <button class="header-button">
-        GET A FREE QUOTE
-      </button>
+      <button class="header-button">GET A FREE QUOTE</button>
     </nav>
     <section class="section-carousel">
       <div class="content">
@@ -47,32 +56,108 @@
       <div class="carousel-has-slant"></div>
     </section>
     <section class="section-product">
-      <h1>Our Products</h1>
-      <div class="product-container">
-        <div class="product-info">
-          <div>
-            <img src="./images/cold-rolled-steel.jpg" alt="">
+      <h2 class="product-title">Products</h2>
+      <div class="products">
+        <div class="product-container">
+          <img src="./images/cold-rolled-steel.jpg" alt="" />
+          <div class="product-description">
+            <h2>Cold Rolled Steel</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
           </div>
-
         </div>
 
+        <div class="product-container">
+          <img src="./images/decking-sheets.jpeg" alt="" />
+          <div class="product-description">
+            <h2>Decking Sheet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <img src="./images/color-coil.png" alt="" />
+          <div class="product-description">
+            <h2>Color Sheet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
+          </div>
+        </div>
+        <div class="product-container">
+          <img src="./images/gpsheetcoil.jpg" alt="" />
+          <div class="product-description">
+            <h2>GP sheet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
+          </div>
+        </div>
+        <div class="product-container">
+          <img src="./images/roofing-accessories.png" alt="" />
+          <div class="product-description">
+            <h2>Roofing Accessories</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
+          </div>
+        </div>
+        <div class="product-container">
+          <img src="./images/gc-sheet.jpg" alt="" />
+          <div class="product-description">
+            <h2>GC Sheet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              nulla mollitia enim quibusdam corporis veritatis magni placeat
+              eum officia, officiis rerum deleniti maxime, optio, omnis
+              dolores? Inventore culpa qui sed.
+            </p>
+            <button>Purchase</button>
+          </div>
+        </div>
       </div>
       <div class="product-has-slant"></div>
     </section>
-    <section class="section-contact ">
-
+    <section class="section-contact">
       <div class="contact-text-container">
         <div>
           <h3>Get a Free Quote</h3>
-          <p>Please fill out your contact info and we’ll get back to you as soon as we can.</p>
+          <p>
+            Please fill out your contact info and we’ll get back to you as
+            soon as we can.
+          </p>
         </div>
         <div>
           <h3>Or contact us directly</h3>
           <p>
-            <b>01642 804534</b>
+            <b>7200240007</b>
           </p>
           <p>
-            <b>studio@viacreative.co.uk </b>
+            <b>enquiry@shunmugasteel.in </b>
+          </p>
         </div>
       </div>
       <div class="contact-form-container">
@@ -84,11 +169,11 @@
           <option value="gc-sheet">GC Sheet</option>
           <option value="roofing-accessories">Roofing Accessories</option>
         </select>
-        <input type="text" placeholder="Name" class="form-input">
-        <input type="text" placeholder="Phone" class="form-input">
-        <input type="text" placeholder="Email" class="form-input">
+        <input type="text" placeholder="Name" class="form-input" />
+        <input type="text" placeholder="Phone" class="form-input" />
+        <input type="text" placeholder="Email" class="form-input" />
         <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"></textarea>
-        <button class="contact-send-button"> SEND </button>
+        <button class="contact-send-button">SEND</button>
       </div>
     </section>
     <section class="section-footer">
@@ -103,7 +188,7 @@
         <h3>Head Office</h3>
         <div class="office-address">
           <p>No.3/100,</p>
-          <p> Rasappa street,</p>
+          <p>Rasappa street,</p>
           <p>1st Floor, Park town,</p>
           <p>Chennai- 600003</p>
         </div>
@@ -122,7 +207,7 @@
       <div class="region-office">
         <h3>Erode office</h3>
         <div class="office-address">
-          <p>No.165, </p>
+          <p>No.165,</p>
           <p>Sakthi Nagar,</p>
           <p>Nalliyampalayam, Thindal,</p>
           <p>Tamil Nadu 638012</p>
@@ -143,17 +228,16 @@
   </main>
 
   <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
       if (navbar) {
         if (window.scrollY > 30) {
-          navbar.classList.add('scrolled');
+          navbar.classList.add("scrolled");
         } else {
-          navbar.classList.remove('scrolled');
+          navbar.classList.remove("scrolled");
         }
       }
-
-    })
+    });
   </script>
 </body>
 
