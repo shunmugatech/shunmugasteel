@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanumga Steels Traders</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <main>
+        <nav id="navbar">
+            <div class="header-logo" onclick="window.location.href='./'">
+                <a href=""> Shanuma Steels Traders </a>
+            </div>
+
+            <ul class="header-nav">
+                <li><a href="./">Home</a></li>
+                <li><a href="./about.html">About us </a></li>
+                <li class="products-list">
+                    <a href="./products/cold-rolled-steel.html">Product </a>
+
+                    <ul class="product-menu-list">
+                        <li>
+                            <a href="./products/cold-rolled-steel.html"> Cold Rolled Sheet</a>
+                        </li>
+                        <li><a href=""> Decking Sheet</a></li>
+                        <li><a href=""> Color Sheet</a></li>
+                        <li><a href=""> GP sheet</a></li>
+                        <li><a href=""> Roofing Accessories</a></li>
+                        <li><a href=""> GC Sheet</a></li>
+                    </ul>
+
+
+                </li>
+
+                <li><a href="">Contact Us</a></li>
+            </ul>
+
+            <button class="header-button">GET A FREE QUOTE</button>
+        </nav>
+
+        <section class="section-contact">
+            <div class="contact-text-container">
+                <div>
+                    <h3>Get a Free Quote</h3>
+                    <p>
+                        Please fill out your contact info and we’ll get back to you as
+                        soon as we can.
+                    </p>
+                </div>
+                <div>
+                    <h3>Or contact us directly</h3>
+                    <p>
+                        <b>7200240007</b>
+                    </p>
+                    <p>
+                        <b>enquiry@shunmugasteel.in </b>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form id="emailForm" class="contact-form">
+                    <select name="product-name" id="product-name" class="form-input">
+                        <option value selected disabled>Please choose the product</option>
+                        <option value="cold-rolled-steel">Cold rolled steel</option>
+                        <option value="color-sheet">Color Sheet</option>
+                        <option value="decking-sheet">Decking Sheet</option>
+                        <option value="gc-sheet">GC Sheet</option>
+                        <option value="roofing-accessories">Roofing Accessories</option>
+                    </select>
+                    <input type="text" placeholder="Name" id="fromName" name="fromName" required class="form-input" />
+                    <input type="tel" placeholder="Phone" id="phoneNo" name="phoneNo" required class="form-input" />
+                    <input type="email" placeholder="Email" id="emailID" name="emailID" required class="form-input" />
+                    <span id="email-required" style="color: red; display: none">
+                        Email is Required</span>
+                    <span id="email-valid" style="color: red; display: none">
+                        Email is not valid</span><br />
+
+                    <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"
+                        id="message"></textarea>
+
+                    <button class="contact-send-button" onclick="validateForm(event)">Send Email</button>
+                </form>
+            </div>
+        </section>
+        <section class="section-footer">
+            <div class="contact-info">
+                <h3 class="green-text">Contact Info</h3>
+                <div class="tele-number">
+                    <h3>Telephone</h3>
+                    <b>+91 7200240007</b>
+                </div>
+            </div>
+            <div class="region-office">
+                <h3>Head Office</h3>
+                <div class="office-address">
+                    <p>No.3/100,</p>
+                    <p>Rasappa street,</p>
+                    <p>1st Floor, Park town,</p>
+                    <p>Chennai- 600003</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Manali Godown</h3>
+                <div class="office-address">
+                    <p>C-141, Sathangadu</p>
+                    <p>iron and steel market,</p>
+                    <p>Through : Gate No 2,</p>
+                    <p>Chennai- 600068</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Erode office</h3>
+                <div class="office-address">
+                    <p>No.165,</p>
+                    <p>Sakthi Nagar,</p>
+                    <p>Nalliyampalayam, Thindal,</p>
+                    <p>Tamil Nadu 638012</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+            <div class="region-office">
+                <h3>Trichy office</h3>
+                <div class="office-address">
+                    <p>No.29/D,</p>
+                    <p>Mannachanullar Road,</p>
+                    <p>Samaypuram,</p>
+                    <p>Tiruchirapalli- 621112</p>
+                </div>
+                <button class="direction-button">Get Direction</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (navbar) {
+                if (window.scrollY > 30) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

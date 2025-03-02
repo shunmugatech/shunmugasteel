@@ -14,7 +14,7 @@
 <body>
   <main>
     <nav id="navbar">
-      <div class="header-logo">
+      <div class="header-logo" onclick="window.location.href='./'">
         <a href=""> Shanuma Steels Traders </a>
       </div>
 
@@ -25,18 +25,20 @@
           <a href="./products/cold-rolled-steel.html">Product </a>
 
           <ul class="product-menu-list">
-            <li><a href="./products/cold-rolled-steel.html"> Cold Rolled Sheet</a></li>
-            <li><a href=""> Decking Sheet</a></li>
-            <li><a href=""> Color Sheet</a></li>
-            <li><a href=""> GP sheet</a></li>
-            <li><a href=""> Roofing Accessories</a></li>
-            <li><a href=""> GC Sheet</a></li>
+            <li>
+              <a href="./products/cold-rolled-steel.html"> Cold Rolled Sheet</a>
+            </li>
+            <li><a href="./products/decking-sheet.html"> Decking Sheet</a></li>
+            <li><a href="./products/color-sheet.html"> Color Sheet</a></li>
+            <li><a href="./products/gp-sheet.html"> GP sheet</a></li>
+            <li><a href="./products/roofing-accessories.html"> Roofing Accessories</a></li>
+            <li><a href="./products/gc-sheet.html"> GC Sheet</a></li>
           </ul>
 
 
         </li>
 
-        <li><a href="">Contact Us</a></li>
+        <li><a href="./contactus.html">Contact Us</a></li>
       </ul>
 
       <button class="header-button">GET A FREE QUOTE</button>
@@ -161,19 +163,28 @@
         </div>
       </div>
       <div class="contact-form-container">
-        <select name="" id="" class="form-input">
-          <option value selected disabled>Please choose the product</option>
-          <option value="cold-rolled-steel">Cold rolled steel</option>
-          <option value="color-sheet">Color Sheet</option>
-          <option value="decking-sheet">Decking Sheet</option>
-          <option value="gc-sheet">GC Sheet</option>
-          <option value="roofing-accessories">Roofing Accessories</option>
-        </select>
-        <input type="text" placeholder="Name" class="form-input" />
-        <input type="text" placeholder="Phone" class="form-input" />
-        <input type="text" placeholder="Email" class="form-input" />
-        <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"></textarea>
-        <button class="contact-send-button">SEND</button>
+        <form id="emailForm" class="contact-form">
+          <select name="product-name" id="product-name" class="form-input">
+            <option value selected disabled>Please choose the product</option>
+            <option value="cold-rolled-steel">Cold rolled steel</option>
+            <option value="color-sheet">Color Sheet</option>
+            <option value="decking-sheet">Decking Sheet</option>
+            <option value="gc-sheet">GC Sheet</option>
+            <option value="roofing-accessories">Roofing Accessories</option>
+          </select>
+          <input type="text" placeholder="Name" id="fromName" name="fromName" required class="form-input" />
+          <input type="tel" placeholder="Phone" id="phoneNo" name="phoneNo" required class="form-input" />
+          <input type="email" placeholder="Email" id="emailID" name="emailID" required class="form-input" />
+          <span id="email-required" style="color: red; display: none">
+            Email is Required</span>
+          <span id="email-valid" style="color: red; display: none">
+            Email is not valid</span><br />
+
+          <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"
+            id="message"></textarea>
+
+          <button class="contact-send-button" onclick="validateForm(event)">Send Email</button>
+        </form>
       </div>
     </section>
     <section class="section-footer">
