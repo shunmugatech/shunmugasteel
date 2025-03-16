@@ -44,6 +44,12 @@ body nav {
   overflow: visible;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+body nav .mobile-menu {
+  display: none;
+}
+body nav .mobile-menu-list {
+  display: none;
+}
 body nav .header-logo {
   font-size: 0px;
   width: 100px;
@@ -483,6 +489,20 @@ body .nav-contact {
 
 @media only screen and (max-width: 767px) {
   /* Styles for mobile devices */
+  body header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  body header nav .mobile-menu {
+    display: block;
+  }
+  body header nav .mobile-menu-list {
+    position: absolute;
+    right: 60px;
+    top: 100px;
+  }
   body header nav .header-logo {
     height: 80px;
   }
@@ -491,6 +511,10 @@ body .nav-contact {
   }
   body header nav .header-button {
     display: none;
+  }
+  body header nav .mobile-nav {
+    display: flex;
+    align-items: center;
   }
   body section {
     padding: 60px;

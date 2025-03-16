@@ -54,6 +54,16 @@ body {
     overflow: visible;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
+    .mobile-menu {
+      display: none;
+
+
+    }
+
+    .mobile-menu-list {
+      display: none;
+    }
+
     // &.scrolled {
     //   background: $secondary-color ;
     //   transition: all ease .25s;
@@ -635,6 +645,21 @@ body {
   body {
     header {
       nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .mobile-menu-list {
+          position: absolute;
+          right: 60px;
+          top: 100px;
+        }
+
         .header-logo {
           height: 80px;
         }
@@ -645,6 +670,12 @@ body {
 
         .header-button {
           display: none;
+        }
+
+        .mobile-nav {
+          display: flex;
+          align-items: center;
+
         }
       }
     }
