@@ -13,25 +13,71 @@
 </head>
 
 <body>
-    <main class="product-page">
-        <nav id="navbar">
-            <div class="header-logo">
-                <a href="">
-                    Shanuma Steels Traders
-                </a>
+    <header>
+        <nav id="navbar" class="nav-product">
+            <div class="header-logo" onclick="window.location.href='../'">
+                <a href="../"> Shanuma Steels Traders </a>
             </div>
 
             <ul class="header-nav">
                 <li><a href="../">Home</a></li>
-                <li><a href="../about.html">About us </a></li>
-                <li><a href="">Product </a></li>
-                <li><a href="">Contact Us</a></li>
+                <!-- <li><a href="../about.html">About us </a></li> -->
+                <li class="products-list">
+                    <a>Product </a>
+
+                    <ul class="product-menu-list">
+                        <li>
+                            <a href="/products/cold-rolled-steel.html"> Cold Rolled Sheet</a>
+                        </li>
+                        <li><a href="/products/decking-sheet.html"> Decking Sheet</a></li>
+                        <li><a href="/products/color-sheet.html"> Color Sheet</a></li>
+                        <li><a href="/products/gp-sheet.html"> GP sheet</a></li>
+                        <li><a href="/products/roofing-accessories.html"> Roofing Accessories</a></li>
+                        <li><a href="/products/gc-sheet.html"> GC Sheet</a></li>
+                    </ul>
+
+
+                </li>
+                <li><a href="../contactus.html">Contact Us</a></li>
             </ul>
 
-            <button class="header-button">
+            <button class="header-button" onclick="window.location.href='../contactus.html'">
                 GET A FREE QUOTE
             </button>
+
+            <div class="mobile-menu">
+                <img src="../images/small-menu.png" alt="" onclick="toggleMenuListItems()">
+
+            </div>
+
+            <ul class="mobile-menu-list" id="mobile-menu-list">
+                <li class="mobile-list">
+                    <a href="../">Home</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/cold-rolled-steel.html">Cold Rolled Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/decking-sheet.html">Decking Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/color-sheet.html">Color Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/gp-sheet.html">GP sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/roofing-accessories.html">Roofing Accessories</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/gc-sheet.html">GC Sheet</a>
+                </li>
+            </ul>
         </nav>
+
+    </header>
+    <main class="product-page">
+
         <section class="section-carousel">
             <div class="content">
                 <h1 class="slide-left">Decking<br />Sheet</h1>
@@ -40,8 +86,8 @@
                     constructions
                 </p>
                 <div class="links slide-left">
-                    <a href="#" class="btn">Learn More</a>
-                    <a href="#" class="btn">or Contact</a>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                    <a href="../contactus.html" class="btn">Contact</a>
                 </div>
             </div>
             <div class="carousel-has-slant"></div>
@@ -90,8 +136,10 @@
                         </table>
                     </div>
                     <div class="product-button">
-                        <button class="product-action-button"> Get Best Quote </button>
-                        <button class="product-action-button"> Request A Callback </button>
+                        <button class="product-action-button" onclick="window.location.href='../contactus.html'"> Get
+                            Best Quote </button>
+                        <button class="product-action-button" onclick="window.location.href='../contactus.html'">
+                            Request A Callback </button>
                     </div>
                 </div>
 
@@ -114,20 +162,28 @@
                 </div>
             </div>
             <div class="contact-form-container">
-                <select name="" id="" class="form-input">
-                    <option value selected disabled>Please choose the product</option>
-                    <option value="cold-rolled-steel">Cold rolled steel</option>
-                    <option value="color-sheet">Color Sheet</option>
-                    <option value="decking-sheet">Decking Sheet</option>
-                    <option value="gc-sheet">GC Sheet</option>
-                    <option value="roofing-accessories">Roofing Accessories</option>
-                </select>
-                <input type="text" placeholder="Name" class="form-input">
-                <input type="text" placeholder="Phone" class="form-input">
-                <input type="text" placeholder="Email" class="form-input">
-                <textarea name="" id="" rows="5" placeholder="Your Enquiry"
-                    class="form-input contact-textarea"></textarea>
-                <button class="contact-send-button"> SEND </button>
+                <form id="emailForm" class="contact-form">
+                    <select name="product-name" id="product-name" class="form-input">
+                        <option value selected disabled>Please choose the product</option>
+                        <option value="cold-rolled-steel">Cold rolled steel</option>
+                        <option value="color-sheet">Color Sheet</option>
+                        <option value="decking-sheet">Decking Sheet</option>
+                        <option value="gc-sheet">GC Sheet</option>
+                        <option value="roofing-accessories">Roofing Accessories</option>
+                    </select>
+                    <input type="text" placeholder="Name" id="fromName" name="fromName" required class="form-input" />
+                    <input type="tel" placeholder="Phone" id="phoneNo" name="phoneNo" required class="form-input" />
+                    <input type="email" placeholder="Email" id="emailID" name="emailID" required class="form-input" />
+                    <span id="email-required" style="color: red; display: none">
+                        Email is Required</span>
+                    <span id="email-valid" style="color: red; display: none">
+                        Email is not valid</span>
+
+                    <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"
+                        id="message"></textarea>
+
+                    <button class="contact-send-button" onclick="validateForm(event)">Send Email</button>
+                </form>
             </div>
         </section>
         <section class="section-footer">
@@ -146,7 +202,7 @@
                     <p>1st Floor, Park town,</p>
                     <p>Chennai- 600003</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Manali Godown</h3>
@@ -156,7 +212,7 @@
                     <p>Through : Gate No 2,</p>
                     <p>Chennai- 600068</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Erode office</h3>
@@ -166,7 +222,7 @@
                     <p>Nalliyampalayam, Thindal,</p>
                     <p>Tamil Nadu 638012</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Trichy office</h3>
@@ -176,7 +232,7 @@
                     <p>Samaypuram,</p>
                     <p>Tiruchirapalli- 621112</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
         </section>
     </main>

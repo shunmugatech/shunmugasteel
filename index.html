@@ -18,14 +18,14 @@
   <header>
     <nav id="navbar">
       <div class="header-logo" onclick="window.location.href='./'">
-        <a href=""> Shanuma Steels Traders </a>
+        <a href="./"> Shanuma Steels Traders </a>
       </div>
 
       <ul class="header-nav">
         <li><a href="./">Home</a></li>
         <!-- <li><a href="./about.html">About us </a></li> -->
         <li class="products-list">
-          <a href="./products/cold-rolled-steel.html">Product </a>
+          <a>Product </a>
 
           <ul class="product-menu-list">
             <li>
@@ -51,18 +51,30 @@
 
       </div>
 
-      <ul class="mobile-menu-list">
-        <li>
-          <a href="">test</a>
+      <ul class="mobile-menu-list" id="mobile-menu-list">
+        <li class="mobile-list">
+          <a href="./">Home</a>
         </li>
-        <li>
-          <a href="">test</a>
+        <li class="mobile-list">
+          <a href="./products/cold-rolled-steel.html">Cold Rolled Sheet</a>
         </li>
-        <li>
-          <a href="">test</a>
+        <li class="mobile-list">
+          <a href="./products/decking-sheet.html">Decking Sheet</a>
         </li>
-        <li>
-          <a href="">test</a>
+        <li class="mobile-list">
+          <a href="./products/color-sheet.html">Color Sheet</a>
+        </li>
+        <li class="mobile-list">
+          <a href="./products/gp-sheet.html">GP sheet</a>
+        </li>
+        <li class="mobile-list">
+          <a href="./products/roofing-accessories.html">Roofing Accessories</a>
+        </li>
+        <li class="mobile-list">
+          <a href="./products/gc-sheet.html">GC Sheet</a>
+        </li>
+        <li class="mobile-list">
+          <a href="./contactus.html">Contact</a>
         </li>
       </ul>
 
@@ -79,8 +91,8 @@
           constructions
         </p>
         <div class="links slide-left">
-          <a href="./contactus.html" class="btn">Learn More</a>
-          <a href="./contactus.html" class="btn">or Contact</a>
+          <!-- <a href="./contactus.html" class="btn">Learn More</a> -->
+          <a href="./contactus.html" class="btn"> Contact</a>
         </div>
       </div>
       <div class="carousel-has-slant"></div>
@@ -191,7 +203,7 @@
         </div>
       </div>
       <div class="contact-form-container">
-        <form id="emailForm" class="contact-form" method="post">
+        <form id="emailForm" class="contact-form">
           <select name="product-name" id="product-name" class="form-input">
             <option value selected disabled>Please choose the product</option>
             <option value="cold-rolled-steel">Cold rolled steel</option>
@@ -232,7 +244,7 @@
             <span style="color: red; display: none" id="send-failed">
               Error occured kindly retry.</span>
           </div>
-          <button class="contact-send-button" type="submit" onclick="validateForm(event)">Send Email</button>
+          <button class="contact-send-button" onclick="validateForm(event)">Send Email</button>
         </form>
 
       </div>
@@ -253,7 +265,7 @@
           <p>1st Floor, Park town,</p>
           <p>Chennai- 600003</p>
         </div>
-        <button class="direction-button">Get Direction</button>
+        <!-- <button class="direction-button">Get Direction</button> -->
       </div>
       <div class="region-office">
         <h3>Manali Godown</h3>
@@ -263,7 +275,7 @@
           <p>Through : Gate No 2,</p>
           <p>Chennai- 600068</p>
         </div>
-        <button class="direction-button">Get Direction</button>
+        <!-- <button class="direction-button">Get Direction</button> -->
       </div>
       <div class="region-office">
         <h3>Erode office</h3>
@@ -273,7 +285,7 @@
           <p>Nalliyampalayam, Thindal,</p>
           <p>Tamil Nadu 638012</p>
         </div>
-        <button class="direction-button">Get Direction</button>
+        <!-- <button class="direction-button">Get Direction</button> -->
       </div>
       <div class="region-office">
         <h3>Trichy office</h3>
@@ -283,7 +295,7 @@
           <p>Samaypuram,</p>
           <p>Tiruchirapalli- 621112</p>
         </div>
-        <button class="direction-button">Get Direction</button>
+        <!-- <button class="direction-button">Get Direction</button> -->
       </div>
     </section>
   </main>

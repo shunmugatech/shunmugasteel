@@ -89,6 +89,10 @@ function validateForm(event) {
 }
 
 function toggleMenuListItems() {
-  const headerNav = document.getElementById("header-nav");
-  headerNav.classList.replace("header-nav", "mobile-nav");
+  const mobileList = document.getElementById("mobile-menu-list");
+  if (mobileList.style.display === "block") {
+    mobileList.style.display = "none";
+  } else {
+    mobileList.style.display = "block";
+  }
 }

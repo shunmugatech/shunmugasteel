@@ -9,27 +9,72 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-
+    <script src="../form-validate.js" async defer></script>
 </head>
 
 <body>
     <header>
         <nav id="navbar" class="nav-product">
             <div class="header-logo" onclick="window.location.href='../'">
-                <a href=""> Shanuma Steels Traders </a>
+                <a href="../"> Shanuma Steels Traders </a>
             </div>
 
             <ul class="header-nav">
                 <li><a href="../">Home</a></li>
-                <li><a href="../about.html">About us </a></li>
-                <li><a href="">Product </a></li>
-                <li><a href="">Contact Us</a></li>
+                <!-- <li><a href="../about.html">About us </a></li> -->
+                <li class="products-list">
+                    <a>Product </a>
+
+                    <ul class="product-menu-list">
+                        <li>
+                            <a href="/products/cold-rolled-steel.html"> Cold Rolled Sheet</a>
+                        </li>
+                        <li><a href="/products/decking-sheet.html"> Decking Sheet</a></li>
+                        <li><a href="/products/color-sheet.html"> Color Sheet</a></li>
+                        <li><a href="/products/gp-sheet.html"> GP sheet</a></li>
+                        <li><a href="/products/roofing-accessories.html"> Roofing Accessories</a></li>
+                        <li><a href="/products/gc-sheet.html"> GC Sheet</a></li>
+                    </ul>
+
+
+                </li>
+                <li><a href="../contactus.html">Contact Us</a></li>
             </ul>
 
-            <button class="header-button">
+            <button class="header-button" onclick="window.location.href='../contactus.html'">
                 GET A FREE QUOTE
             </button>
+
+            <div class="mobile-menu">
+                <img src="../images/small-menu.png" alt="" onclick="toggleMenuListItems()">
+
+            </div>
+
+            <ul class="mobile-menu-list" id="mobile-menu-list">
+                <li class="mobile-list">
+                    <a href="../">Home</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/cold-rolled-steel.html">Cold Rolled Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/decking-sheet.html">Decking Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/color-sheet.html">Color Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/gp-sheet.html">GP sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/roofing-accessories.html">Roofing Accessories</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="/products/gc-sheet.html">GC Sheet</a>
+                </li>
+            </ul>
         </nav>
+
     </header>
     <main class="product-page">
 
@@ -41,8 +86,7 @@
                     constructions
                 </p>
                 <div class="links slide-left">
-                    <a href="#" class="btn">Learn More</a>
-                    <a href="#" class="btn">or Contact</a>
+                    <a href="../contactus.html" class="btn">Contact</a>
                 </div>
             </div>
             <div class="carousel-has-slant"></div>
@@ -91,8 +135,10 @@
                         </table>
                     </div>
                     <div class="product-button">
-                        <button class="product-action-button"> Get Best Quote </button>
-                        <button class="product-action-button"> Request A Callback </button>
+                        <button class="product-action-button" onclick="window.location.href='../contactus.html'"> Get
+                            Best Quote </button>
+                        <button class="product-action-button" onclick="window.location.href='../contactus.html'">
+                            Request A Callback </button>
                     </div>
                 </div>
 
@@ -155,7 +201,7 @@
                     <p>1st Floor, Park town,</p>
                     <p>Chennai- 600003</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Manali Godown</h3>
@@ -165,7 +211,7 @@
                     <p>Through : Gate No 2,</p>
                     <p>Chennai- 600068</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Erode office</h3>
@@ -175,7 +221,7 @@
                     <p>Nalliyampalayam, Thindal,</p>
                     <p>Tamil Nadu 638012</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Trichy office</h3>
@@ -185,7 +231,7 @@
                     <p>Samaypuram,</p>
                     <p>Tiruchirapalli- 621112</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
         </section>
     </main>

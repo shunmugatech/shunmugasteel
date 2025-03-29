@@ -15,6 +15,10 @@ body {
   color: #333;
   background-color: $secondary-color;
 
+  .mobile-menu-list {
+    display: none;
+  }
+
   .contactus-page {
     padding-top: 110px;
   }
@@ -55,12 +59,6 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
     .mobile-menu {
-      display: none;
-
-
-    }
-
-    .mobile-menu-list {
       display: none;
     }
 
@@ -655,9 +653,38 @@ body {
         }
 
         .mobile-menu-list {
+          display: none;
+          list-style: none;
           position: absolute;
-          right: 60px;
+          right: 20px;
           top: 100px;
+          width: 90%;
+          background: white;
+          font-size: large;
+
+          .mobile-list {
+            border: 1px solid $primary-blue;
+            padding: 20px;
+            list-style: none;
+            width: 100%;
+
+            a {
+              display: block;
+              color: $primary-blue;
+              text-decoration: none;
+              pointer-events: auto;
+            }
+          }
+
+
+        }
+
+        .mobile-menu-list :hover {
+          background-color: $primary-blue;
+
+          a {
+            color: white
+          }
         }
 
         .header-logo {
@@ -781,6 +808,10 @@ body {
           }
         }
       }
+    }
+
+    .contactus-page {
+      padding-top: 0px
     }
   }
 }

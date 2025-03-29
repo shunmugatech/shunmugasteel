@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="./form-validate.js" async defer></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 
             <ul class="header-nav">
                 <li><a href="./">Home</a></li>
-                <li><a href="./about.html">About us </a></li>
+                <!-- <li><a href="./about.html">About us </a></li> -->
                 <li class="products-list">
                     <a href="./products/cold-rolled-steel.html">Product </a>
 
@@ -28,17 +29,49 @@
                         <li>
                             <a href="./products/cold-rolled-steel.html"> Cold Rolled Sheet</a>
                         </li>
-                        <li><a href=""> Decking Sheet</a></li>
-                        <li><a href=""> Color Sheet</a></li>
-                        <li><a href=""> GP sheet</a></li>
-                        <li><a href=""> Roofing Accessories</a></li>
-                        <li><a href=""> GC Sheet</a></li>
+                        <li><a href="./products/decking-sheet.html"> Decking Sheet</a></li>
+                        <li><a href="./products/color-sheet.html"> Color Sheet</a></li>
+                        <li><a href="./products/gp-sheet.html"> GP sheet</a></li>
+                        <li><a href="./products/roofing-accessories.html"> Roofing Accessories</a></li>
+                        <li><a href="./products/gc-sheet.html"> GC Sheet</a></li>
                     </ul>
 
 
                 </li>
 
                 <li><a href="">Contact Us</a></li>
+            </ul>
+
+            <div class="mobile-menu">
+                <img src="./images/small-menu.png" alt="" onclick="toggleMenuListItems()">
+
+            </div>
+
+            <ul class="mobile-menu-list" id="mobile-menu-list">
+                <li class="mobile-list">
+                    <a href="./">Home</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/cold-rolled-steel.html">Cold Rolled Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/decking-sheet.html">Decking Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/color-sheet.html">Color Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/gp-sheet.html">GP sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/roofing-accessories.html">Roofing Accessories</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./products/gc-sheet.html">GC Sheet</a>
+                </li>
+                <li class="mobile-list">
+                    <a href="./contactus.html">Contact</a>
+                </li>
             </ul>
 
             <button class="header-button">GET A FREE QUOTE</button>
@@ -107,7 +140,7 @@
                     <p>1st Floor, Park town,</p>
                     <p>Chennai- 600003</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Manali Godown</h3>
@@ -117,7 +150,7 @@
                     <p>Through : Gate No 2,</p>
                     <p>Chennai- 600068</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
             <div class="region-office">
                 <h3>Erode office</h3>
@@ -127,7 +160,7 @@
                     <p>Nalliyampalayam, Thindal,</p>
                     <p>Tamil Nadu 638012</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <button class="direction-button"></button>
             </div>
             <div class="region-office">
                 <h3>Trichy office</h3>
@@ -137,7 +170,7 @@
                     <p>Samaypuram,</p>
                     <p>Tiruchirapalli- 621112</p>
                 </div>
-                <button class="direction-button">Get Direction</button>
+                <!-- <button class="direction-button">Get Direction</button> -->
             </div>
         </section>
     </main>
