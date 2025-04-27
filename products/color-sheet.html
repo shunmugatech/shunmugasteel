@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="../form-validate.js" async defer></script>
 </head>
 
 <body>
+    <div id="loaderOverlay">
+        <div class="spinner"></div>
+    </div>
     <header>
         <nav id="navbar" class="nav-product">
             <div class="header-logo" onclick="window.location.href='../'">
@@ -101,11 +105,13 @@
                 <div class="product-description">
                     <h2>Color Sheet</h2>
                     <div class="product-text-description">
-                        <p>Color Sheet has emerged as a game-changer, combining
+                        <p>
+                            Color Sheet has emerged as a game-changer, combining
                             strength, precision, and a smooth surface finish to meet the needs of a wide range of
                             industries.
                         </p>
-                        <p>At Shanumga Steel, we specialize in providing premium cold-rolled steel
+                        <p>
+                            At Shanumga Steel, we specialize in providing premium cold-rolled steel
                             solutions tailored to your specific requirements.
                         </p>
                     </div>
@@ -139,56 +145,93 @@
                         </table>
                     </div>
                     <div class="product-button">
-                        <button class="product-action-button" onclick="window.location.href='../contactus.html'"> Get
-                            Best Quote </button>
                         <button class="product-action-button" onclick="window.location.href='../contactus.html'">
-                            Request A Callback </button>
+                            Get
+                            Best Quote
+                        </button>
+                        <button class="product-action-button" onclick="window.location. href='tel:+917200240007'">
+                            Call Now
+                        </button>
                     </div>
                 </div>
 
             </div>
         </section>
-        <section class="section-contact ">
-
+        <section class="section-contact">
             <div class="contact-text-container">
                 <div>
                     <h3>Get a Free Quote</h3>
-                    <p>Please fill out your contact info and we’ll get back to you as soon as we can.</p>
+                    <p>
+                        Please fill out your contact info and we’ll get back to you as
+                        soon as we can.
+                    </p>
                 </div>
                 <div>
                     <h3>Or contact us directly</h3>
                     <p>
-                        <b>7200240007</b>
+                        <b><a style="color:white;" href="https://wa.me/7200240007?text=Hi" target="_blank">7200240007</a></b>
                     </p>
                     <p>
-                        <b>enquiry@shunmugasteel.in </b>
+
+                        <b><a style="color:white;" href="mailto:enquiry@shunmugasteel.in">enquiry@shunmugasteel.in</a> </b>
+                    </p>
                 </div>
             </div>
             <div class="contact-form-container">
                 <form id="emailForm" class="contact-form">
                     <select name="product-name" id="product-name" class="form-input">
-                        <option value selected disabled>Please choose the product</option>
+                        <option value="">Please choose the product</option>
                         <option value="cold-rolled-steel">Cold rolled steel</option>
-                        <option value="color-sheet">Color Sheet</option>
+                        <option selected="selected" value="color-sheet">Color Sheet</option>
                         <option value="decking-sheet">Decking Sheet</option>
                         <option value="gc-sheet">GC Sheet</option>
-                        <option value="gp-sheet">GC Sheet</option>
+                        <option value="gp-sheet">GP Sheet</option>
                         <option value="roofing-accessories">Roofing Accessories</option>
                         <option value="other">Other</option>
                     </select>
-                    <input type="text" placeholder="Name" id="fromName" name="fromName" required class="form-input" />
-                    <input type="tel" placeholder="Phone" id="phoneNo" name="phoneNo" required class="form-input" />
-                    <input type="email" placeholder="Email" id="emailID" name="emailID" required class="form-input" />
-                    <span id="email-required" style="color: red; display: none">
-                        Email is Required</span>
-                    <span id="email-valid" style="color: red; display: none">
-                        Email is not valid</span>
+                    <div>
+                        <input type="text" placeholder="Name" id="fromName" name="fromName" required class="form-input" />
+                        <span id="name-required" style="color: red; display: none">
+                            Name is Required
+                        </span>
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Phone" id="phoneNo" name="phoneNo" required class="form-input" />
+                        <span id="phoneNo-required" style="color: red; display: none">
+                            Number is Required
+                        </span>
+                        <span id="phoneNo-valid" style="color: red; display: none">
+                            Number is not valid
+                        </span>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" id="emailID" name="emailID" required class="form-input" />
 
-                    <textarea name="" id="" rows="5" placeholder="Your Enquiry" class="form-input contact-textarea"
-                        id="message"></textarea>
-
+                        <span id="emailID-required" style="color: red; display: none">
+                            Email is Required
+                        </span>
+                        <span id="emailID-valid" style="color: red; display: none">
+                            Email is not valid
+                        </span>
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <textarea name="message" id="message" rows="5" placeholder="Your Enquiry"
+                                  class="form-input contact-textarea"></textarea>
+                        <span id="message-required" style="color: red; display: none">
+                            Number is Required
+                        </span>
+                    </div>
+                    <div>
+                        <span style="color: green; display: none" id="send-success">
+                            Thank you for your message.
+                        </span>
+                        <span style="color: red; display: none" id="send-failed">
+                            Error occured kindly retry.
+                        </span>
+                    </div>
                     <button class="contact-send-button" onclick="validateForm(event)">Send Email</button>
                 </form>
+
             </div>
         </section>
         <section class="section-footer">
@@ -196,14 +239,14 @@
                 <h3 class="green-text">Contact Info</h3>
                 <div class="tele-number">
                     <h3>Telephone</h3>
-                    <b>+91 7200240007</b>
+                    <b><a style="color:white;" href="tel:+917200240007">+91 7200240007</a></b>
                 </div>
             </div>
             <div class="region-office">
                 <h3>Head Office</h3>
                 <div class="office-address">
                     <p>No.3/100,</p>
-                    <p> Rasappa street,</p>
+                    <p>Rasappa street,</p>
                     <p>1st Floor, Park town,</p>
                     <p>Chennai- 600003</p>
                 </div>
@@ -222,24 +265,43 @@
             <div class="region-office">
                 <h3>Erode office</h3>
                 <div class="office-address">
-                    <p>No.165, </p>
+                    <p>No.165,</p>
                     <p>Sakthi Nagar,</p>
                     <p>Nalliyampalayam, Thindal,</p>
                     <p>Tamil Nadu 638012</p>
                 </div>
                 <!-- <button class="direction-button">Get Direction</button> -->
             </div>
-            <div class="region-office">
-                <h3>Trichy office</h3>
-                <div class="office-address">
-                    <p>No.29/D,</p>
-                    <p>Mannachanullar Road,</p>
-                    <p>Samaypuram,</p>
-                    <p>Tiruchirapalli- 621112</p>
-                </div>
-                <!-- <button class="direction-button">Get Direction</button> -->
-            </div>
         </section>
+        <div class="social-floating-container">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/7200240007" target="_blank" class="social-btn whatsapp" aria-label="Chat on WhatsApp">
+                <svg style="color: rgb(55, 197, 27);" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><path d="M414.73,97.1A222.14,222.14,0,0,0,256.94,32C134,32,33.92,131.58,33.87,254A220.61,220.61,0,0,0,63.65,365L32,480l118.25-30.87a223.63,223.63,0,0,0,106.6,27h.09c122.93,0,223-99.59,223.06-222A220.18,220.18,0,0,0,414.73,97.1ZM256.94,438.66h-.08a185.75,185.75,0,0,1-94.36-25.72l-6.77-4L85.56,427.26l18.73-68.09-4.41-7A183.46,183.46,0,0,1,71.53,254c0-101.73,83.21-184.5,185.48-184.5A185,185,0,0,1,442.34,254.14C442.3,355.88,359.13,438.66,256.94,438.66ZM358.63,300.47c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54,2.78-14.4,18-17.65,21.75-6.5,4.16-12.07,1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56,2.44-11.32c2.51-2.49,5.57-6.48,8.36-9.72s3.72-5.56,5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53,20.53,0,0,0-14.86,6.94c-5.11,5.56-19.51,19-19.51,46.28s20,53.68,22.76,57.38,39.3,59.73,95.21,83.76a323.11,323.11,0,0,0,31.78,11.68c13.35,4.22,25.5,3.63,35.1,2.2,10.71-1.59,33-13.42,37.63-26.38s4.64-24.06,3.25-26.37S364.21,303.24,358.63,300.47Z" style="fill-rule:evenodd" fill="white"></path></svg>
+            </a>
+
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/yourprofile" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.3 3h-1.9v7A10 10 0 0022 12z" /></svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/yourprofile" target="_blank" class="social-btn instagram" aria-label="Instagram">
+                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="white"></path></svg>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-btn twitter" aria-label="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="white">
+                    <path d="M815.2 0H999L678.7 521.1 1200 1226.6H830.7L553.2 821.3 234.4 1226.6H50.6l340.3-518.5L0 0h379.9l241.6 366.2zM756.5 1107.4h107.9L348.3 108.3H234.4z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="white"></path></svg>
+            </a>
+        </div>
     </main>
 
     <script>

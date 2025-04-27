@@ -1,6 +1,7 @@
 emailjs.init("7jEU1Vh-QYTZPfs9z");
 
 function sendEmail() {
+  document.getElementById("loaderOverlay").style.display = "block";
   const form = document.getElementById("emailForm");
   const fromName = form.elements["fromName"]?.value;
   const emailID = form.elements["emailID"]?.value;
@@ -16,15 +17,20 @@ function sendEmail() {
     })
     .then(
       function (response) {
-        document.getElementById("send-success").style.display = "block";
+          document.getElementById("send-success").style.display = "block";
+          document.getElementById("loaderOverlay").style.display = "block";
+          document.getElementById("loaderOverlay").style.display = "none";
+          document.getElementById("emailForm").reset();
         setTimeout(() => {
-          document.getElementById("send-success").style.display = "none";
+            document.getElementById("send-success").style.display = "none";
         }, 5000);
       },
       function (error) {
-        document.getElementById("send-failed").style.display = "block";
+          document.getElementById("send-failed").style.display = "block";
+          document.getElementById("loaderOverlay").style.display = "block";
+          document.getElementById("loaderOverlay").style.display = "none";
         setTimeout(() => {
-          document.getElementById("send-failed").style.display = "none";
+            document.getElementById("send-failed").style.display = "none";
         }, 5000);
       }
     );
@@ -55,7 +61,7 @@ function validateForm(event) {
   const emailID = document.getElementById("emailID").value;
   const phoneNo = document.getElementById("phoneNo").value;
   const message = document.getElementById("message").value;
-  displayError("fromName-required", fromName === "");
+  displayError("name-required", fromName === "");
   displayError("emailID-required", emailID === "");
   displayError("phoneNo-required", phoneNo === "");
   displayError("message-required", message === "");
@@ -84,7 +90,7 @@ function validateForm(event) {
       }
     });
   });
-  isValid && sendEmail();
+    isValid && sendEmail();
   return false;
 }
 
