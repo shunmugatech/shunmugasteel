@@ -191,16 +191,25 @@ body .section-contact .contact-textarea {
   padding: 15px;
   grid-column: span 2;
 }
-body .section-contact .contact-send-button {
-  grid-column: 2;
-  width: 180px;
-  justify-self: end;
-  background: #062966;
-  color: #fff;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600;
-}
+    body .section-contact .contact-send-button {
+        grid-column: 2;
+        width: 180px;
+        justify-self: end;
+        background: #062966;
+        color: #fff;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+        body .section-contact .contact-send-button:hover {
+            background: #0a3a99; /* A lighter shade for hover effect */
+            color: #e0e0e0; /* Optional: slightly lighter text on hover */
+        }
+
+
 body .section-carousel {
   width: 100%;
   height: 100vh;
