@@ -673,8 +673,8 @@ body .nav-contact {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     text-decoration: none;
     color: white;
@@ -708,8 +708,8 @@ body .nav-contact {
 }
 
 .social-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 60px;
+    height: 60px;
     fill: white;
 }
 
@@ -722,12 +722,12 @@ body .nav-contact {
     }
 
     .social-btn {
-        width: 44px;
-        height: 44px;
+        width: 80px;
+        height: 80px;
     }
 
         .social-btn svg {
-            width: 20px;
-            height: 20px;
+            width: 60px;
+            height: 60px;
         }
 }
