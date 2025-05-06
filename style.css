@@ -356,7 +356,7 @@ body .section-footer {
   background: #062966;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   color: #fff;
   gap: 20px;
 }
@@ -682,8 +682,8 @@ body .nav-contact {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     text-decoration: none;
     color: white;
@@ -717,8 +717,8 @@ body .nav-contact {
 }
 
 .social-btn svg {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     fill: white;
 }
 
@@ -731,12 +731,12 @@ body .nav-contact {
     }
 
     .social-btn {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
         .social-btn svg {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
         }
 }
